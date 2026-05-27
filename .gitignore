@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Astro temporary files
+.astro/
+
+# IDEs and OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

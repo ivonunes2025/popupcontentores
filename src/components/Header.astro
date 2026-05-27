@@ -1,0 +1,87 @@
+---
+---
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="#" class="nav-logo">
+      Intel<span>Home</span>
+    </a>
+    
+    <ul class="nav-links">
+      <li><a href="#sobre">O que é</a></li>
+      <li><a href="#vantagens">Vantagens</a></li>
+      <li><a href="#modelos">Modelos</a></li>
+      <li><a href="#como">Como Funciona</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#orcamento" class="nav-cta">Pedir Orçamento</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-links">
+    <a href="#sobre" class="mobile-link">O Que É</a>
+    <a href="#vantagens" class="mobile-link">Vantagens</a>
+    <a href="#modelos" class="mobile-link">Modelos</a>
+    <a href="#como" class="mobile-link">Como Funciona</a>
+    <a href="#faq" class="mobile-link">FAQ</a>
+    <a href="#orcamento" class="mobile-link mobile-cta">Pedir Orçamento</a>
+  </div>
+</div>
+
+
+
+<script>
+  const setupNavbar = () => {
+    const navbar = document.getElementById('navbar');
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    // Sticky Scroll Action
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        navbar?.classList.add('scrolled');
+      } else {
+        navbar?.classList.remove('scrolled');
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+
+    // Toggle menu
+    const toggleMenu = () => {
+      hamburgerBtn?.classList.toggle('active');
+      mobileMenu?.classList.toggle('open');
+      
+      // Prevent body scroll when menu is open
+      if (mobileMenu?.classList.contains('open')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    };
+
+    hamburgerBtn?.addEventListener('click', toggleMenu);
+
+    // Close menu when links are clicked
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburgerBtn?.classList.remove('active');
+        mobileMenu?.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  };
+
+  // Run on initial load
+  setupNavbar();
+  // Support Astro View Transitions if used in future
+  document.addEventListener('astro:page-load', setupNavbar);
+</script>

@@ -1,0 +1,89 @@
+---
+---
+<section id="vantagens">
+  <div class="vantagens-glow"></div>
+  
+  <div class="vantagens-inner">
+    <div class="vantagens-header">
+      <div class="reveal">
+        <div class="section-label">Porquê Escolher</div>
+        <h2 class="section-title">Vantagens<br>Reais</h2>
+      </div>
+      <p class="section-body reveal" style="transition-delay:.1s">
+        A construção de alvenaria convencional demora meses, gera custos adicionais constantes e desgasta o seu orçamento. As nossas habitações IntelHome chegam prontas a usar, com prazos e preços rigorosamente fechados.
+      </p>
+    </div>
+
+    <div class="vantagens-grid reveal" style="transition-delay:.15s">
+      <!-- Card 1 -->
+      <div class="vantagem-card">
+        <div class="card-glow"></div>
+        <div class="vantagem-num">01</div>
+        <div class="vantagem-title">Instalação em Horas</div>
+        <p class="vantagem-desc">Sem fundações de betão complexas ou demoradas. A sua casa chega num dia e está totalmente pronta e habitável no dia seguinte. Uma equipa instala tudo entre 4 a 8 horas.</p>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="vantagem-card">
+        <div class="card-glow"></div>
+        <div class="vantagem-num">02</div>
+        <div class="vantagem-title">Custo Muito Inferior</div>
+        <p class="vantagem-desc">Poupe até 60% face à construção tradicional. Garantimos um orçamento fechado e sem derrapagens financeiras imprevistas, permitindo-lhe gerir a sua vida com total controlo.</p>
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="vantagem-card">
+        <div class="card-glow"></div>
+        <div class="vantagem-num">03</div>
+        <div class="vantagem-title">Mobilidade Total</div>
+        <p class="vantagem-desc">Se a sua vida mudar, mude a casa consigo. Sendo perfeitamente transportável em camião flatbed, é a solução modular ideal para quem valoriza a flexibilidade geográfica e de investimentos.</p>
+      </div>
+      
+      <!-- Card 4 -->
+      <div class="vantagem-card">
+        <div class="card-glow"></div>
+        <div class="vantagem-num">04</div>
+        <div class="vantagem-title">Estrutura Ultra Robusta</div>
+        <p class="vantagem-desc">Desenvolvida com aço estrutural galvanizado reforçado. Projetada para resistir a ventos fortes, sismos moderados, cargas severas e variações térmicas extremas com a máxima estabilidade.</p>
+      </div>
+      
+      <!-- Card 5 -->
+      <div class="vantagem-card">
+        <div class="card-glow"></div>
+        <div class="vantagem-num">05</div>
+        <div class="vantagem-title">Sustentabilidade Ativa</div>
+        <p class="vantagem-desc">Processo de fabrico industrializado de desperdício zero e baixíssima pegada ecológica. Preparada para a integração autónoma de painéis solares e sistemas de aproveitamento pluvial.</p>
+      </div>
+      
+      <!-- Card 6 -->
+      <div class="vantagem-card">
+        <div class="card-glow"></div>
+        <div class="vantagem-num">06</div>
+        <div class="vantagem-title">100% Personalizável</div>
+        <p class="vantagem-desc">Acabamentos à sua medida. Escolha o revestimento interior e exterior (madeira, cimento, minimalista escuro ou claro). Desenhamos as divisões e a cozinha de acordo com o seu estilo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<script>
+  const setupCardHoverGlow = () => {
+    const cards = document.querySelectorAll('.vantagem-card');
+    
+    cards.forEach(c => {
+      const card = c as HTMLElement;
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+      });
+    });
+  };
+
+  setupCardHoverGlow();
+  document.addEventListener('astro:page-load', setupCardHoverGlow);
+</script>
