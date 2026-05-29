@@ -1,36 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
   <defs>
-    <!-- Sophisticated background gradient -->
+    <!-- Premium rich-dark circular background gradient -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0b0f19" />
-      <stop offset="100%" stop-color="#04060b" />
+      <stop offset="0%" stop-color="#0a0e17" />
+      <stop offset="100%" stop-color="#030509" />
     </linearGradient>
-    
-    <!-- Royal/Cobalt Brand Gradient -->
-    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#3b82f6" />
+
+    <!-- Ultra-vibrant tech-blue gradient for the logo mark -->
+    <linearGradient id="krGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
       <stop offset="50%" stop-color="#2563eb" />
       <stop offset="100%" stop-color="#1d4ed8" />
     </linearGradient>
     
-    <!-- Light Speed/Lightning Accent Gradient -->
-    <linearGradient id="accentGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#60a5fa" />
-      <stop offset="100%" stop-color="#93c5fd" />
+    <!-- Neon blue glow gradient -->
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#93c5fd" />
+      <stop offset="100%" stop-color="#3b82f6" />
     </linearGradient>
   </defs>
 
-  <!-- Favicon Container background with soft border -->
-  <rect width="100" height="100" rx="26" fill="url(#bgGrad)"/>
-  <rect x="1.5" y="1.5" width="97" height="97" rx="24.5" stroke="#2563eb" stroke-opacity="0.4" stroke-width="2"/>
+  <!-- Circular background badge - extremely modern and premium -->
+  <circle cx="50" cy="50" r="48" fill="url(#bgGrad)" stroke="#2563eb" stroke-width="2.5" stroke-opacity="0.5" />
+  
+  <!-- Sleek geometric house & lightning hybrid mark -->
+  <!-- A sharp, clean roof shape outlined in vibrant tech-blue gradient -->
+  <path d="M 22 45 L 50 18 L 78 45" stroke="url(#krGrad)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Bolder house body representing a modular shipping container -->
+  <rect x="27" y="45" width="46" height="34" rx="6" fill="#0d131f" stroke="url(#krGrad)" stroke-width="6" />
 
-  <!-- Logo Mark: Stylized geometric house & speed bolt (KasaRápida concept) -->
-  <!-- Outer container frame -->
-  <path d="M 28 36 L 50 20 L 72 36 L 72 74 A 6 6 0 0 1 66 80 L 34 80 A 6 6 0 0 1 28 74 Z" fill="#111827" stroke="url(#brandGrad)" stroke-width="4.5" stroke-linejoin="round"/>
-  
-  <!-- Dynamic swift line/bolt overlapping to indicate "Rápida" (speed/efficiency) -->
-  <path d="M 46 25 L 60 25 L 48 42 L 58 42 L 40 68 L 46 48 L 38 48 Z" fill="url(#accentGrad)" />
-  
-  <!-- Sleek base stand representation / modular foundation -->
-  <rect x="22" y="80" width="56" height="4" rx="2" fill="#2563eb" opacity="0.8"/>
+  <!-- Speed lightning bolt ("Rápida" essence) in high-contrast neon blue, cutting through the house beautifully -->
+  <path d="M 52 28 L 64 28 L 50 48 L 60 48 L 40 74 L 46 53 L 36 53 Z" fill="url(#glowGrad)" />
 </svg>
