@@ -1244,6 +1244,32 @@ nav.scrolled {
   border-color: var(--white);
 }
 
+.modelo-features-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.modelo-features-list li {
+  font-size: 0.85rem;
+  color: var(--muted);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.4;
+}
+
+.modelo-features-list li::before {
+  content: '✓';
+  color: var(--copper);
+  font-weight: bold;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
 @media (max-width: 991px) {
   .modelos-header {
     grid-template-columns: 1fr;
