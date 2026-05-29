@@ -2965,3 +2965,125 @@ footer {
     height: 32px;
   }
 }
+
+/* ==========================================================================
+   SIMPLE FOOTER STYLES
+   ========================================================================== */
+
+footer {
+  background-color: #060910;
+  border-top: 1px solid var(--border);
+  padding: 4rem 2rem 3rem;
+  position: relative;
+  z-index: 5;
+}
+
+.footer-simple-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-brand-simple {
+  max-width: 420px;
+}
+
+.footer-desc-simple {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-top: 1.25rem;
+}
+
+.footer-nav-simple {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1.5rem;
+}
+
+.footer-links-simple {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.footer-links-simple a {
+  color: var(--sand);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.footer-links-simple a:hover {
+  color: var(--copper);
+}
+
+.footer-social-simple {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-bottom-simple {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-bottom-links-simple {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-bottom-links-simple a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-bottom-links-simple a:hover {
+  color: var(--copper);
+}
+
+.bullet-sep {
+  color: rgba(148, 163, 184, 0.2);
+}
+
+@media (max-width: 900px) {
+  .footer-simple-grid {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+  }
+  .footer-nav-simple {
+    align-items: flex-start;
+    width: 100%;
+  }
+  .footer-links-simple {
+    justify-content: flex-start;
+    gap: 1.5rem;
+  }
+  .footer-bottom-simple {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
