@@ -4,7 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 ---
 
-<Layout title="KasaRápida — Linha Expandível (Compact 20 & Duplex 40)" description="Explore as especificações completas, galeria de fotos de alta qualidade e detalhes da nossa linha de casas expansíveis Compact 20 e Duplex 40.">
+<Layout title="KasaRápida — Modelo Compact 20 (Expandível)" description="Explore as especificações completas, galeria de fotos de alta qualidade e detalhes da nossa casa expansível Compact 20.">
   <Header />
 
   <main class="model-detail-page">
@@ -15,19 +15,19 @@ import Footer from '../../components/Footer.astro';
       <div class="model-hero-inner">
         <div class="model-hero-content">
           <a href="/#modelos" class="back-link">← Voltar aos Modelos</a>
-          <span class="section-label">Casas Expansíveis Avançadas</span>
-          <h1 class="model-title">Linha Expandível<br><span class="accent-text">Compact 20 & Duplex 40</span></h1>
+          <span class="section-label">Habitação Expansível Avançada</span>
+          <h1 class="model-title">KasaRápida<br><span class="accent-text">Compact 20</span></h1>
           <p class="model-lead">
-            As nossas habitações expansíveis representam o pico da engenharia modular. Transportadas de forma ultracompacta, abrem-se em minutos no terreno para revelar uma casa completa, moderna e totalmente equipada de 32 m² ou 68 m².
+            A Compact 20 representa o pico da engenharia de casas dobráveis inteligentes. Transportada de forma ultracompacta, abre-se em minutos no terreno para revelar uma habitação moderna, elegante e totalmente equipada de 32 m² de área útil.
           </p>
           <div class="quick-meta-grid">
             <div class="meta-item">
-              <span class="meta-num">4-8h</span>
-              <span class="meta-txt">Instalação no Local</span>
+              <span class="meta-num">32 m²</span>
+              <span class="meta-txt">Área Útil Total</span>
             </div>
             <div class="meta-item">
-              <span class="meta-num">T1 a T3</span>
-              <span class="meta-txt">Configurações de Quartos</span>
+              <span class="meta-num">T0 / T1</span>
+              <span class="meta-txt">Tipologia Flexível</span>
             </div>
             <div class="meta-item">
               <span class="meta-num">A+</span>
@@ -35,128 +35,77 @@ import Footer from '../../components/Footer.astro';
             </div>
           </div>
           <div class="hero-actions">
-            <a href="/#orcamento" class="btn-primary">Pedir Orçamento Personalizado</a>
+            <a href="/#orcamento" class="btn-primary">Pedir Orçamento Compact 20</a>
           </div>
         </div>
         
         <div class="model-hero-media">
           <div class="main-media-card">
-            <img src="/2.jpeg" alt="KasaRápida Duplex 40" id="main-gallery-view" class="main-preview-img" />
-            <div class="media-caption" id="media-caption-text">Modelo Duplex 40 (68 m²) — A nossa casa expansível de maior sucesso para famílias.</div>
+            <img src="/1.jpeg" alt="KasaRápida Compact 20 Vista Principal" id="main-gallery-view" class="main-preview-img" />
+            <div class="media-caption" id="media-caption-text">Compact 20 (Ângulo A) — Design arquitetónico minimalista com acabamento termo-lacado moderno.</div>
           </div>
           <div class="media-thumbnails">
-            <button class="thumb-btn active" data-src="/2.jpeg" data-caption="Modelo Duplex 40 (68 m²) — A nossa casa expansível de maior sucesso para famílias.">
-              <img src="/2.jpeg" alt="Duplex 40 Thumb" />
-              <span>Duplex 40</span>
+            <button class="thumb-btn active" data-src="/1.jpeg" data-caption="Compact 20 (Ângulo A) — Design arquitetónico minimalista com acabamento termo-lacado moderno.">
+              <img src="/1.jpeg" alt="Compact 20 Vista Principal" />
+              <span>Ângulo Principal</span>
             </button>
-            <button class="thumb-btn" data-src="/1.jpeg" data-caption="Modelo Compact 20 (32 m²) — Formato compacto ideal para estúdios ou escritórios de jardim.">
-              <img src="/1.jpeg" alt="Compact 20 Thumb" />
-              <span>Compact 20</span>
+            <button class="thumb-btn" data-src="/2.jpeg" data-caption="Compact 20 (Ângulo B) — Acabamentos antracite refinados e janelas panorâmicas com isolamento de dupla vidragem.">
+              <img src="/2.jpeg" alt="Compact 20 Vista Alternativa" />
+              <span>Ângulo Lateral</span>
             </button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Interactive Tabs: Detailed Specifications -->
+    <!-- Detailed Specifications -->
     <section class="model-specs-section">
       <div class="specs-inner">
         <div class="section-header-centered">
           <span class="section-label">Especificações Técnicas</span>
-          <h2 class="section-title">Compara os Modelos</h2>
+          <h2 class="section-title">Ficha Técnica Detalhada</h2>
           <p class="section-body">
-            Ambos os modelos partilham a mesma estrutura robusta em aço galvanizado e isolamento premium, variando nas dimensões e distribuição do espaço útil.
+            Conheça todos os detalhes construtivos, materiais estruturais e isolamento de alta performance que tornam a Compact 20 líder em durabilidade e conforto.
           </p>
         </div>
 
-        <div class="specs-tabs-nav">
-          <button class="specs-tab-btn active" data-model="compact">Compact 20 (32 m²)</button>
-          <button class="specs-tab-btn" data-model="duplex">Duplex 40 (68 m²)</button>
-        </div>
-
-        <div class="specs-tab-contents">
-          <!-- Compact 20 Specs -->
-          <div class="specs-tab-pane active" id="pane-compact">
-            <div class="specs-pane-grid">
-              <div class="specs-list-card">
-                <h3>Resumo de Características</h3>
-                <ul class="detail-specs-list">
-                  <li><strong>Área Total:</strong> 32 m² (aproximadamente 5.9m x 5.4m expandido)</li>
-                  <li><strong>Tipologia Recomendada:</strong> Estúdio T0 ou T1 Inteligente</li>
-                  <li><strong>Tempo de Abertura:</strong> ~30 minutos (estrutura principal)</li>
-                  <li><strong>Preço de Entrada:</strong> Desde €22.000 (transporte e montagem básica incluídos)</li>
-                  <li><strong>Ideal Para:</strong> Escritórios modernos, estúdios, alojamento local (AL), residências séniores ou casas de campo.</li>
-                </ul>
-              </div>
-              
-              <div class="specs-table-card">
-                <h3>Ficha Técnica Compact 20</h3>
-                <table class="specs-table">
-                  <tr>
-                    <th>Estrutura Principal</th>
-                    <td>Aço estrutural galvanizado com pintura epóxi anticorrosiva marinha</td>
-                  </tr>
-                  <tr>
-                    <th>Paredes & Cobertura</th>
-                    <td>Painéis sanduíche termo-acústicos avançados com núcleo de PU (Poliuretano) 75mm</td>
-                  </tr>
-                  <tr>
-                    <th>Caixilharia</th>
-                    <td>Alumínio com rutura térmica lacado a cinza antracite, vidro duplo temperado</td>
-                  </tr>
-                  <tr>
-                    <th>Pavimento</th>
-                    <td>Base de fibrocimento de alta densidade revestida com piso laminado vinílico click de alta resistência</td>
-                  </tr>
-                  <tr>
-                    <th>Instalações</th>
-                    <td>Cablagem elétrica pré-embutida, canalização completa com saídas externas prontas</td>
-                  </tr>
-                </table>
-              </div>
-            </div>
+        <div class="specs-pane-grid">
+          <div class="specs-list-card">
+            <h3>Resumo do Modelo</h3>
+            <ul class="detail-specs-list">
+              <li><strong>Área Útil Real:</strong> 32 m² (aproximadamente 5.9m largura x 5.4m profundidade expandido)</li>
+              <li><strong>Dimensão Dobrada:</strong> 5.9m x 2.2m x 2.5m (fácil de transportar em camião padrão)</li>
+              <li><strong>Tipologias de Layout:</strong> Open Space T0 ou T1 com quarto independente e WC completo</li>
+              <li><strong>Preço Chave-na-Mão:</strong> Desde €22.000 (transporte básico e montagem rápida incluídos)</li>
+              <li><strong>Tempo de Instalação:</strong> Cerca de 4 a 8 horas para ficar 100% pronta e habitável</li>
+              <li><strong>Vida Útil Estimada:</strong> Superior a 50 anos com aço estrutural galvanizado</li>
+            </ul>
           </div>
-
-          <!-- Duplex 40 Specs -->
-          <div class="specs-tab-pane" id="pane-duplex">
-            <div class="specs-pane-grid">
-              <div class="specs-list-card">
-                <h3>Resumo de Características</h3>
-                <ul class="detail-specs-list">
-                  <li><strong>Área Total:</strong> 68 m² (aproximadamente 11.8m x 5.8m expandido)</li>
-                  <li><strong>Tipologia Recomendada:</strong> T2 Espaçoso ou T3 Familiar</li>
-                  <li><strong>Tempo de Abertura:</strong> ~60 minutos (estrutura principal)</li>
-                  <li><strong>Preço de Entrada:</strong> Desde €47.500 (transporte e montagem básica incluídos)</li>
-                  <li><strong>Ideal Para:</strong> Habitação própria permanente, casa de férias familiar, escritórios corporativos ou unidades de turismo expansivas.</li>
-                </ul>
-              </div>
-              
-              <div class="specs-table-card">
-                <h3>Ficha Técnica Duplex 40</h3>
-                <table class="specs-table">
-                  <tr>
-                    <th>Estrutura Principal</th>
-                    <td>Aço estrutural galvanizado reforçado anticorrosão com eixos de articulação selados</td>
-                  </tr>
-                  <tr>
-                    <th>Paredes & Cobertura</th>
-                    <td>Painéis sanduíche termo-acústicos de alta performance (PU 75mm / EPS opcional densidade extra)</td>
-                  </tr>
-                  <tr>
-                    <th>Caixilharia</th>
-                    <td>Janelas panorâmicas em alumínio térmico com duplo vidro temperado de baixa emissividade</td>
-                  </tr>
-                  <tr>
-                    <th>Pavimento</th>
-                    <td>Painéis de cimento composto hidrófugos revestidos a PVC flutuante acústico premium</td>
-                  </tr>
-                  <tr>
-                    <th>Instalações</th>
-                    <td>Quadro elétrico geral integrado, canalização dupla para casas de banho e cozinha</td>
-                  </tr>
-                </table>
-              </div>
-            </div>
+          
+          <div class="specs-table-card">
+            <h3>Especificações de Engenharia</h3>
+            <table class="specs-table">
+              <tr>
+                <th>Estrutura Principal</th>
+                <td>Aço estrutural galvanizado Q235B com pintura epóxi anticorrosiva de alta aderência</td>
+              </tr>
+              <tr>
+                <th>Isolamento Térmico</th>
+                <td>Painéis sanduíche de 75mm em Poliuretano (PU) de alta densidade (40 kg/m³), corta-fogo</td>
+              </tr>
+              <tr>
+                <th>Caixilharia & Vidros</th>
+                <td>Alumínio com rutura térmica premium lacado a cinza antracite, vidro duplo temperado 5+12A+5</td>
+              </tr>
+              <tr>
+                <th>Pavimento Integrado</th>
+                <td>Base estrutural de fibrocimento hidrófugo 18mm com piso laminado vinílico flutuante antiderrapante</td>
+              </tr>
+              <tr>
+                <th>Rede Elétrica e Águas</th>
+                <td>Quadro elétrico geral integrado, cablagens embutidas anti-chama e canalização multicamada pronta</td>
+              </tr>
+            </table>
           </div>
         </div>
       </div>
@@ -167,50 +116,50 @@ import Footer from '../../components/Footer.astro';
       <div class="gallery-inner">
         <div class="section-header-centered">
           <span class="section-label">Galeria de Inspiração</span>
-          <h2 class="section-title">Fotos do Modelo & Acabamentos</h2>
+          <h2 class="section-title">Fotos Reais do Modelo & Acabamentos</h2>
           <p class="section-body">
-            Veja em detalhe os pormenores construtivos, exteriores elegantes e as opções de design de interiores disponíveis.
+            Ambas as fotos exteriores representam o mesmo modelo Compact 20, demonstrando a versatilidade de ângulos e a integração de acabamentos de luxo nas casas de banho e cozinha.
           </p>
         </div>
 
         <div class="model-photo-grid">
           <div class="photo-item zoomable">
-            <img src="/2.jpeg" alt="Duplex 40 Exterior Moderno" />
+            <img src="/1.jpeg" alt="Compact 20 — Vista Principal de Frente" />
             <div class="photo-meta">
-              <h4>Duplex 40 — Exterior Premium</h4>
-              <p>Acabamento antracite moderno e janelas panorâmicas que trazem iluminação total.</p>
+              <h4>Compact 20 — Fachada Principal</h4>
+              <p>Vista frontal ampla mostrando o design simétrico expansível e a porta de acesso térmico.</p>
             </div>
           </div>
           
           <div class="photo-item zoomable">
-            <img src="/1.jpeg" alt="Compact 20 Exterior Otimizado" />
+            <img src="/2.jpeg" alt="Compact 20 — Vista Tridimensional de Ângulo" />
             <div class="photo-meta">
-              <h4>Compact 20 — Exterior Otimizado</h4>
-              <p>Ideal para estúdios independentes com integração de deck exterior.</p>
+              <h4>Compact 20 — Ângulo Tridimensional</h4>
+              <p>Demonstração da profundidade da casa expandida com acabamentos pretos minimalistas.</p>
             </div>
           </div>
 
           <div class="photo-item zoomable">
-            <img src="/cb1.jpeg" alt="Cozinha Integrada Premium" />
+            <img src="/cb1.jpeg" alt="Cozinha Integrada Premium KasaRápida" />
             <div class="photo-meta">
               <h4>Cozinha Premium open-space</h4>
-              <p>Móveis lacados minimalistas e arrumação sob medida incluídos de fábrica.</p>
+              <p>Móveis lacados minimalistas e arrumação sob medida incluídos de fábrica no modelo.</p>
             </div>
           </div>
 
           <div class="photo-item zoomable">
-            <img src="/cb2.jpeg" alt="Casa de Banho Mármore Modern Light" />
+            <img src="/cb2.jpeg" alt="Casa de Banho Mármore Modern Light KasaRápida" />
             <div class="photo-meta">
               <h4>Casa de Banho Mármore Modern</h4>
-              <p>Acabamentos marmoreados suspensos e iluminação embutida de alto nível.</p>
+              <p>Acabamentos marmoreados suspensos e iluminação LED embutida incluídos de série.</p>
             </div>
           </div>
           
           <div class="photo-item zoomable">
-            <img src="/cb3.jpeg" alt="Casa de Banho Luxuosa Gold Rain" />
+            <img src="/cb3.jpeg" alt="Casa de Banho Luxuosa Gold Rain KasaRápida" />
             <div class="photo-meta">
               <h4>Casa de Banho Mármore Gold</h4>
-              <p>Detalhes modernos com veios dourados e louça sanitária premium.</p>
+              <p>Detalhes modernos com veios dourados e louça sanitária suspensa de alta gama.</p>
             </div>
           </div>
           
@@ -218,7 +167,7 @@ import Footer from '../../components/Footer.astro';
             <img src="/cb4.jpeg" alt="Casa de Banho Compacta Elegante" />
             <div class="photo-meta">
               <h4>Duche Curved Elegance</h4>
-              <p>Solução otimizada de canto com vidro semicircular e metais pretos mate.</p>
+              <p>Cabine de duche de canto semicircular otimizada com perfis em preto mate.</p>
             </div>
           </div>
         </div>
@@ -233,21 +182,21 @@ import Footer from '../../components/Footer.astro';
             <span class="section-label">Construção Robusta</span>
             <h2>Tecnologia Construtiva</h2>
             <p>
-              A estrutura principal é composta por perfis de aço estrutural Q235B galvanizado a quente, com tratamento de fosfatação e pintura em pó eletrostática de poliuretano com cura em forno. Isto garante uma durabilidade excepcional de **mais de 50 anos**, mesmo em ambientes com elevada salinidade ou humidade.
+              A estrutura principal da Compact 20 é composta por perfis de aço estrutural Q235B galvanizado a quente. Todo o aço passa por um processo de pintura eletrostática a pó com cura em forno de alta temperatura, resultando numa carcaça ultra-resistente à oxidação marinha e humidade, com durabilidade estimada de **mais de 50 anos**.
             </p>
             <p>
-              Os painéis de parede utilizam tecnologia termo-acústica avançada: chapa de aço exterior de 0.4mm, miolo de espuma de poliuretano (PU) de alta densidade (40 kg/m³) de 75mm de espessura que funciona como isolamento térmico contínuo, e chapa de aço interior lacada a branco. Este sistema proporciona um coeficiente de transmissão térmica (valor U) extremamente baixo, garantindo o conforto em todas as estações do ano e uma **classe energética A+**.
+              As paredes térmicas utilizam painéis sanduíche contínuos de 75mm em Poliuretano (PU) expandido de altíssima densidade. Isto assegura que a casa isole o calor do verão e retenha o aquecimento no inverno, garantindo uma eficiência climatérica excepcional de classe energética **A+** em todo o território nacional.
             </p>
           </div>
           
           <div class="deep-text-card">
             <span class="section-label">Transporte e Logística</span>
-            <h2>Logística e Montagem</h2>
+            <h2>Logística e Montagem Rápida</h2>
             <p>
-              Ambos os modelos chegam ao seu terreno num estado completamente dobrado (com uma largura de apenas 2.2 metros), cumprindo os requisitos normativos de transporte de carga padrão sem a necessidade de escolta policial ou transporte especial complexo.
+              A Compact 20 é transportada completamente dobrada, com uma largura de apenas 2.2 metros. Isto permite que seja transportada em camiões normais de carga padrão, reduzindo drasticamente os custos e as complexidades de licenças de transporte especial.
             </p>
             <p>
-              No local, a casa é descarregada com uma grua sobre fundações ligeiras previamente preparadas (como sapatas ou estacas de betão simples). O processo de expansão lateral é feito de forma assistida por guinchos mecânicos ou hidráulicos integrados. Uma equipa profissional da KasaRápida realiza a instalação, fixação dos eixos de vedação estanque, e conexões finais em **apenas um dia de trabalho**.
+              Ao chegar ao local, a casa é suspensa e assentada em fundações leves (como sapatas ou blocos simples). O processo de desdobramento assistido por guinchos leva menos de uma hora, e a equipa técnica da KasaRápida executa a fixação estanque dos painéis, a colocação de calhas e a ligação de infraestruturas em **apenas 4 a 8 horas**.
             </p>
           </div>
         </div>
@@ -257,41 +206,41 @@ import Footer from '../../components/Footer.astro';
     <!-- What is Included List -->
     <section class="included-section">
       <div class="included-inner">
-        <h2 class="section-title text-center">O Que Está Incluído no Preço?</h2>
+        <h2 class="section-title text-center">O Que Está Incluído no Preço Chave-na-Mão?</h2>
         <p class="section-body text-center">
-          Entregamos a habitação pronta a habitar no interior. Esqueça custos surpresa.
+          Entregamos a habitação totalmente equipada no interior e pronta a habitar. Sem custos ocultos.
         </p>
         
         <div class="included-grid">
           <div class="included-card">
             <div class="inc-icon">✓</div>
-            <h4>Montagem Completa</h4>
-            <p>Içamento e montagem da estrutura no local com vedação termo-acústica e calhas de água integradas.</p>
+            <h4>Montagem e Nivelamento</h4>
+            <p>Içamento e montagem completa da estrutura no seu terreno, incluindo calhas pluviais e isolamento de eixos.</p>
           </div>
           <div class="included-card">
             <div class="inc-icon">✓</div>
-            <h4>Cozinha Completa</h4>
-            <p>Móveis inferiores e superiores com bancada em pedra composta sintética e lava-loiça duplo incluídos.</p>
+            <h4>Cozinha Equipada</h4>
+            <p>Móveis inferiores e suspensos lacados, bancada em pedra composta sintética e lava-loiça duplo com torneira flexível.</p>
           </div>
           <div class="included-card">
             <div class="inc-icon">✓</div>
-            <h4>Casa de Banho Equipada</h4>
-            <p>Sanita suspensa, móvel com lavatório, espelho LED, base de duche completa e cabine de vidro.</p>
+            <h4>Casa de Banho Completa</h4>
+            <p>Sanita suspensa embutida, lavatório moderno com móvel flutuante, espelho LED e cabine de duche em vidro temperado.</p>
           </div>
           <div class="included-card">
             <div class="inc-icon">✓</div>
-            <h4>Instalação Elétrica</h4>
-            <p>Quadro elétrico, fiação anti-fogo embutida, tomadas padrão europeu e iluminação LED interior completa.</p>
+            <h4>Instalação Elétrica Pronta</h4>
+            <p>Quadro elétrico geral, fiação anti-chama interna, tomadas de padrão europeu e focos LED embutidos em todo o teto.</p>
           </div>
           <div class="included-card">
             <div class="inc-icon">✓</div>
-            <h4>Canalização Completa</h4>
-            <p>Tubagem multicamada para águas limpas e PVC para esgotos pré-conectados, prontos a ligar na saída da casa.</p>
+            <h4>Canalização e Esgotos</h4>
+            <p>Rede de águas limpas em multicamada e águas residuais pré-instaladas, centralizadas numa única saída exterior.</p>
           </div>
           <div class="included-card">
             <div class="inc-icon">✓</div>
-            <h4>Piso e Acabamentos</h4>
-            <p>Pavimento vinílico flutuante flutuante click antiderrapante em todas as divisões e portas interiores lacadas.</p>
+            <h4>Pavimento Vinílico Click</h4>
+            <p>Chão flutuante vinílico de alta durabilidade e isolamento acústico em toda a habitação, incluindo rodapés.</p>
           </div>
         </div>
       </div>
@@ -301,9 +250,9 @@ import Footer from '../../components/Footer.astro';
     <section class="model-cta-bottom">
       <div class="cta-inner reveal">
         <h2>Pronto para Ter a Sua KasaRápida?</h2>
-        <p>Receba hoje mesmo um orçamento chave-na-mão para o modelo Compact 20 ou Duplex 40 com envio para qualquer terreno em Portugal.</p>
+        <p>Peça hoje um orçamento gratuito chave-na-mão para a Compact 20. Fabricamos e entregamos no seu terreno em Portugal Continental.</p>
         <div class="cta-btns">
-          <a href="/#orcamento" class="btn-primary">Pedir Orçamento Grátis</a>
+          <a href="/#orcamento" class="btn-primary">Pedir Orçamento Compact 20</a>
           <a href="/#modelos" class="btn-secondary">Voltar ao Catálogo</a>
         </div>
       </div>
@@ -345,24 +294,7 @@ import Footer from '../../components/Footer.astro';
       });
     });
 
-    // 2. Specifications Comparison Tabs
-    const specBtns = document.querySelectorAll('.specs-tab-btn');
-    const specPanes = document.querySelectorAll('.specs-tab-pane');
-
-    specBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const model = btn.getAttribute('data-model');
-        
-        specBtns.forEach(b => b.classList.remove('active'));
-        specPanes.forEach(p => p.classList.remove('active'));
-
-        btn.classList.add('active');
-        const activePane = document.getElementById(`pane-${model}`);
-        activePane?.classList.add('active');
-      });
-    });
-
-    // 3. Zoomable Gallery Lightbox
+    // 2. Zoomable Gallery Lightbox
     const lightbox = document.getElementById('model-lightbox');
     const lightboxImg = document.getElementById('model-lightbox-img') as HTMLImageElement;
     const lightboxCaption = document.getElementById('model-lightbox-caption');
