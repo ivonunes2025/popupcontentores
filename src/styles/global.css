@@ -2949,3 +2949,19 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* ==========================================================================
+   BRAND LOGO SVG STYLES
+   ========================================================================== */
+
+.brand-logo-svg {
+  height: 38px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 650px) {
+  .brand-logo-svg {
+    height: 32px;
+  }
+}
