@@ -1,0 +1,153 @@
+---
+---
+<section class="wc-options" id="acabamentos">
+  <div class="wc-glow"></div>
+  <div class="wc-inner">
+    <div class="wc-header reveal">
+      <div>
+        <div class="section-label">Personalização de Interiores</div>
+        <h2 class="section-title">Opções de<br>Acabamentos</h2>
+      </div>
+      <p class="section-body">
+        Entregamos as nossas habitações modulares chave-na-mão com acabamentos interiores premium. Escolha a configuração perfeita para a sua cozinha e casa de banho (WC) de acordo com o seu estilo.
+      </p>
+    </div>
+
+    <!-- Tabs Navigation -->
+    <div class="wc-tabs reveal" style="transition-delay: .1s">
+      <button class="tab-btn active" data-tab="wc">Casas de Banho (WC)</button>
+      <button class="tab-btn" data-tab="cozinha">Cozinhas</button>
+    </div>
+
+    <!-- Tab Contents -->
+    <div class="wc-content reveal" style="transition-delay: .15s">
+      
+      <!-- WC Tab -->
+      <div class="tab-pane active" id="tab-wc">
+        <div class="wc-grid">
+          
+          <div class="wc-card">
+            <div class="wc-img-wrapper">
+              <img src="/cb2.jpeg" alt="WC Mármore Modern Light - IntelHome" class="wc-img" />
+              <div class="wc-overlay">
+                <span class="wc-name">Mármore Modern Light</span>
+                <span class="wc-desc">Bancada flutuante suspensa, iluminação LED integrada e revestimento marmoreado de veios suaves.</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="wc-card">
+            <div class="wc-img-wrapper">
+              <img src="/cb3.jpeg" alt="WC Mármore Gold Rain - IntelHome" class="wc-img" />
+              <div class="wc-overlay">
+                <span class="wc-name">Mármore Gold Rain</span>
+                <span class="wc-desc">Mármore luxuoso com veios dourados e contrastantes, cabine de duche espaçosa e louça suspensa.</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="wc-card">
+            <div class="wc-img-wrapper">
+              <img src="/cb4.jpeg" alt="WC Curved Compact Elegance - IntelHome" class="wc-img" />
+              <div class="wc-overlay">
+                <span class="wc-name">Curved Compact Elegance</span>
+                <span class="wc-desc">Cabine de duche semicircular com design arredondado, móvel de arrumação e torneira preta mate.</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="wc-card">
+            <div class="wc-img-wrapper">
+              <img src="/cb5.jpeg" alt="WC Elegance Sliding Glass - IntelHome" class="wc-img" />
+              <div class="wc-overlay">
+                <span class="wc-name">Elegance Sliding Glass</span>
+                <span class="wc-desc">Divisória de duche com porta de correr em vidro fosco com perfis pretos minimalistas.</span>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      <!-- Cozinha Tab -->
+      <div class="tab-pane" id="tab-cozinha">
+        <div class="cozinha-showcase">
+          <div class="cozinha-img-wrapper">
+            <img src="/cb1.jpeg" alt="Cozinha Premium Integrada - IntelHome" class="cozinha-img" />
+          </div>
+          <div class="cozinha-details">
+            <h3>Cozinha Premium Integrada</h3>
+            <p>Os nossos móveis de cozinha são desenhados de forma otimizada para o conceito open space das nossas habitações, promovendo a amplitude e a máxima arrumação.</p>
+            <ul class="cozinha-specs-list">
+              <li>Mobiliário modular lacado a tons pastel de fácil limpeza</li>
+              <li>Bancada em pedra composta de alta durabilidade</li>
+              <li>Lava-loiça duplo encastrado com torneira monocomando flexível</li>
+              <li>Módulos superiores de arrumação suspensos incluídos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Image Lightbox Modal -->
+  <div class="wc-lightbox" id="wc-lightbox">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="" />
+    <div id="lightbox-caption"></div>
+  </div>
+</section>
+
+<script>
+  const setupWcTabs = () => {
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tab = btn.getAttribute('data-tab');
+        
+        tabBtns.forEach(b => b.classList.remove('active'));
+        tabPanes.forEach(p => p.classList.remove('active'));
+
+        btn.classList.add('active');
+        const activePane = document.getElementById(`tab-${tab}`);
+        activePane?.classList.add('active');
+      });
+    });
+
+    // Lightbox modal functionality
+    const lightbox = document.getElementById('wc-lightbox');
+    const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const closeBtn = document.getElementById('lightbox-close');
+    const wcCards = document.querySelectorAll('.wc-card img, .cozinha-img');
+
+    wcCards.forEach(img => {
+      img.addEventListener('click', () => {
+        if (lightbox && lightboxImg) {
+          lightbox.classList.add('open');
+          const element = img as HTMLImageElement;
+          lightboxImg.src = element.src;
+          if (lightboxCaption) {
+            lightboxCaption.textContent = element.alt;
+          }
+        }
+      });
+    });
+
+    closeBtn?.addEventListener('click', () => {
+      lightbox?.classList.remove('open');
+    });
+
+    lightbox?.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove('open');
+      }
+    });
+  };
+
+  setupWcTabs();
+  document.addEventListener('astro:page-load', setupWcTabs);
+</script>

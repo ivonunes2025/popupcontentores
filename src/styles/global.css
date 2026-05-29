@@ -1972,3 +1972,357 @@ footer {
     gap: 1rem 1.5rem;
   }
 }
+
+/* ==========================================================================
+   INTERIOR & WC FINISHES OPTIONS COMPONENT
+   ========================================================================== */
+.wc-options {
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+  text-align: center;
+}
+
+.wc-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.04) 0%, transparent 65%);
+  top: 10%;
+  left: -10%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.wc-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.wc-header {
+  margin-bottom: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wc-header .section-label {
+  display: inline-flex;
+}
+
+.wc-header .section-label::before,
+.wc-header .section-label::after {
+  content: '';
+  height: 1px;
+  width: 30px;
+  background: var(--copper);
+  opacity: .4;
+}
+
+.wc-header .section-title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.wc-header .section-body {
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--muted);
+}
+
+/* Tabs styles */
+.wc-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+}
+
+.tab-btn {
+  background: rgba(20, 24, 34, 0.5);
+  border: 1px solid var(--border2);
+  color: var(--sand-light);
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tab-btn:hover {
+  border-color: var(--white);
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.tab-btn.active {
+  background: var(--copper);
+  border-color: var(--copper);
+  color: var(--white);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.25);
+}
+
+.tab-pane {
+  display: none;
+  animation: tabFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+@keyframes tabFadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* WC Grid */
+.wc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.wc-card {
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg3);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  aspect-ratio: 3/4;
+}
+
+.wc-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--border2);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.wc-img-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+.wc-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wc-card:hover .wc-img {
+  transform: scale(1.04);
+}
+
+.wc-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(6, 9, 17, 0.95) 0%, rgba(6, 9, 17, 0.4) 60%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  text-align: left;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.wc-name {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  color: var(--white);
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+}
+
+.wc-desc {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* Cozinha Showcase style */
+.cozinha-showcase {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3.5rem;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: left;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cozinha-img-wrapper {
+  width: 100%;
+  aspect-ratio: 16/11;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+.cozinha-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cozinha-img-wrapper:hover .cozinha-img {
+  transform: scale(1.03);
+}
+
+.cozinha-details {
+  padding: 3.5rem 3rem 3.5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cozinha-details h3 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  letter-spacing: 0.03em;
+  color: var(--white);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.cozinha-details p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.cozinha-specs-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cozinha-specs-list li {
+  font-size: 0.85rem;
+  color: var(--sand-light);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.4;
+}
+
+.cozinha-specs-list li::before {
+  content: '✓';
+  color: var(--copper);
+  font-weight: bold;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+/* Lightbox Modal */
+.wc-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(6, 9, 17, 0.96);
+  backdrop-filter: blur(8px);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.wc-lightbox.open {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.5rem;
+  color: var(--white);
+  font-size: 2.5rem;
+  font-weight: 300;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  user-select: none;
+  z-index: 1010;
+}
+
+.lightbox-close:hover {
+  color: var(--copper);
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 6px;
+  border: 1px solid var(--border2);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+  object-fit: contain;
+  animation: lightboxZoom 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes lightboxZoom {
+  from { transform: scale(0.95); }
+  to { transform: scale(1); }
+}
+
+#lightbox-caption {
+  margin-top: 1.5rem;
+  color: var(--sand-light);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  max-width: 600px;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+  .wc-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .cozinha-showcase {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .cozinha-details {
+    padding: 2rem;
+  }
+  .cozinha-img-wrapper {
+    aspect-ratio: 16/10;
+  }
+}
+
+@media (max-width: 650px) {
+  .wc-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .tab-btn {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.85rem;
+  }
+}
