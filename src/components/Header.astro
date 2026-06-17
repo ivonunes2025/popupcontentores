@@ -5,36 +5,40 @@
     <a href="/" class="nav-logo" aria-label="KasaRápida Homepage">
       <svg class="brand-logo-svg" viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <linearGradient id="topFace" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#93c5fd"/>
-            <stop offset="100%" stop-color="#60a5fa"/>
+          <!-- Premium rich-dark circular background gradient -->
+          <linearGradient id="bgGradHeader" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#0a0e17" />
+            <stop offset="100%" stop-color="#030509" />
           </linearGradient>
-          <linearGradient id="rightFace" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#2563eb"/>
-            <stop offset="100%" stop-color="#1d4ed8"/>
+
+          <!-- Ultra-vibrant tech-blue gradient for the logo mark -->
+          <linearGradient id="krGradHeader" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#60a5fa" />
+            <stop offset="50%" stop-color="#2563eb" />
+            <stop offset="100%" stop-color="#1d4ed8" />
           </linearGradient>
-          <linearGradient id="leftFace" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#3b82f6"/>
-            <stop offset="100%" stop-color="#1d4ed8"/>
+          
+          <!-- Neon blue glow gradient -->
+          <linearGradient id="glowGradHeader" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#93c5fd" />
+            <stop offset="100%" stop-color="#3b82f6" />
           </linearGradient>
         </defs>
 
-        <!-- ICON: Isometric 3D Modular Cube forming 'K' (Architectural & Tech-Savvy) -->
-        <g transform="translate(6, 4)">
-          <!-- Top Face of the Cube -->
-          <polygon points="18 4, 30 10, 18 16, 6 10" fill="url(#topFace)"/>
+        <!-- ICON: Sleek geometric house & lightning hybrid mark from favicon inside circular badge -->
+        <g transform="translate(6, 6) scale(0.36)">
+          <!-- Circular background badge - extremely modern and premium -->
+          <circle cx="50" cy="50" r="48" fill="url(#bgGradHeader)" stroke="#2563eb" stroke-width="2.5" stroke-opacity="0.5" />
           
-          <!-- Left Face of the Cube -->
-          <polygon points="6 10, 18 16, 18 32, 6 26" fill="url(#leftFace)"/>
+          <!-- Sleek geometric house & lightning hybrid mark -->
+          <!-- A sharp, clean roof shape outlined in vibrant tech-blue gradient -->
+          <path d="M 22 45 L 50 18 L 78 45" stroke="url(#krGradHeader)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
           
-          <!-- Right Face of the Cube -->
-          <polygon points="18 16, 30 10, 30 26, 18 32" fill="url(#rightFace)"/>
-          
-          <!-- An overlay speed arrow indicating "Rápida" that wraps around the cube -->
-          <path d="M 5 20 L 18 27 L 31 20" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
-          
-          <!-- Small tech dot connection at the apex -->
-          <circle cx="18" cy="4" r="2" fill="#ffffff" />
+          <!-- Bolder house body representing a modular shipping container -->
+          <rect x="27" y="45" width="46" height="34" rx="6" fill="#0d131f" stroke="url(#krGradHeader)" stroke-width="6" />
+
+          <!-- Speed lightning bolt ("Rápida" essence) in high-contrast neon blue, cutting through the house beautifully -->
+          <path d="M 52 28 L 64 28 L 50 48 L 60 48 L 40 74 L 46 53 L 36 53 Z" fill="url(#glowGradHeader)" />
         </g>
 
         <!-- TYPOGRAPHY: Elegant brand name -->
@@ -43,12 +47,11 @@
     </a>
     
     <ul class="nav-links">
-      <li><a href="/#sobre">O que é</a></li>
-      <li><a href="/#vantagens">Vantagens</a></li>
-      <li><a href="/#modelos">Modelos</a></li>
-      <li><a href="/#como">Como Funciona</a></li>
-      <li><a href="/#faq">FAQ</a></li>
-      <li><a href="/#orcamento" class="nav-cta">Pedir Orçamento</a></li>
+      <li><a href="/o-que-e">O que é</a></li>
+      <li><a href="/vantagens">Vantagens</a></li>
+      <li><a href="/como-funciona">Como Funciona</a></li>
+      <li><a href="/faq">FAQ</a></li>
+      <li><a href="/contacto" class="nav-cta">Contacto</a></li>
     </ul>
 
     <button class="hamburger" id="hamburger-btn" aria-label="Menu">
@@ -60,24 +63,88 @@
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-menu-links">
-    <a href="/#sobre" class="mobile-link">O Que É</a>
-    <a href="/#vantagens" class="mobile-link">Vantagens</a>
-    <a href="/#modelos" class="mobile-link">Modelos</a>
-    <a href="/#como" class="mobile-link">Como Funciona</a>
-    <a href="/#faq" class="mobile-link">FAQ</a>
-    <a href="/#orcamento" class="mobile-link mobile-cta">Pedir Orçamento</a>
+  <!-- Glowing visual spots for high-end aesthetic -->
+  <div class="mobile-menu-glow-1"></div>
+  <div class="mobile-menu-glow-2"></div>
+  
+  <div class="mobile-menu-content">
+    <div class="mobile-menu-header-label">Menu de Navegação</div>
+    
+    <div class="mobile-menu-grid">
+      <!-- Card 1 -->
+      <a href="/o-que-e" class="mobile-menu-card">
+        <div class="menu-card-icon">🏡</div>
+        <div class="menu-card-body">
+          <span class="menu-card-title">O Que É</span>
+          <span class="menu-card-desc">Conceito e tecnologia modular expansível</span>
+        </div>
+        <div class="menu-card-arrow">→</div>
+      </a>
+      
+      <!-- Card 2 -->
+      <a href="/vantagens" class="mobile-menu-card">
+        <div class="menu-card-icon">⚡</div>
+        <div class="menu-card-body">
+          <span class="menu-card-title">Vantagens</span>
+          <span class="menu-card-desc">Comparação com construção tradicional</span>
+        </div>
+        <div class="menu-card-arrow">→</div>
+      </a>
+      
+      <!-- Card 3 -->
+      <a href="/como-funciona" class="mobile-menu-card">
+        <div class="menu-card-icon">🛠️</div>
+        <div class="menu-card-body">
+          <span class="menu-card-title">Como Funciona</span>
+          <span class="menu-card-desc">Processo de logística e montagem em 2 dias</span>
+        </div>
+        <div class="menu-card-arrow">→</div>
+      </a>
+      
+      <!-- Card 4 -->
+      <a href="/faq" class="mobile-menu-card">
+        <div class="menu-card-icon">💬</div>
+        <div class="menu-card-body">
+          <span class="menu-card-title">Perguntas Frequentes</span>
+          <span class="menu-card-desc">Licenciamento, ligações e dúvidas gerais</span>
+        </div>
+        <div class="menu-card-arrow">→</div>
+      </a>
+    </div>
+
+    <!-- Quick Support and Contact Hub -->
+    <div class="mobile-menu-contacts">
+      <span class="contacts-header-label">Contacto Direto</span>
+      
+      <!-- WhatsApp CTA -->
+      <a href="https://wa.me/351914003331" target="_blank" class="mobile-contact-whatsapp-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.458L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.742.002-2.602-1.005-5.05-2.839-6.89C16.656 2.138 14.21 1.129 12.007 1.13c-5.442 0-9.866 4.372-9.87 9.746-.002 1.942.512 3.84 1.492 5.535L2.61 21.037l4.037-1.883zm13.11-7.234c-.26-.13-1.532-.756-1.77-.84-.236-.087-.41-.13-.58.13-.17.26-.66.84-.81.995-.147.155-.296.17-.556.04-.26-.13-1.097-.404-2.09-1.287-.773-.688-1.295-1.538-1.447-1.797-.15-.26-.016-.4.113-.53.117-.117.26-.3.39-.45.13-.15.174-.26.26-.43.088-.173.044-.326-.02-.456-.065-.13-.58-1.393-.795-1.91-.21-.51-.42-.44-.58-.45-.15-.007-.323-.008-.493-.008-.17 0-.447.064-.68.314-.233.25-.89.87-.89 2.122 0 1.25.91 2.457 1.036 2.624.127.168 1.792 2.738 4.342 3.836.607.262 1.08.42 1.448.537.61.194 1.165.167 1.604.102.49-.072 1.53-.625 1.743-1.2.215-.575.215-1.07.15-1.17-.064-.1-.235-.16-.494-.29z"/>
+        </svg>
+        <span>Falar por WhatsApp</span>
+      </a>
+
+      <!-- Quick Action buttons (Call and Email) -->
+      <div class="mobile-menu-quick-links">
+        <a href="tel:+351914003331" class="quick-contact-item">
+          <span class="quick-contact-icon">📞</span>
+          <span class="quick-contact-label">Ligar Direto</span>
+        </a>
+        <a href="/contacto" class="quick-contact-item">
+          <span class="quick-contact-icon">📩</span>
+          <span class="quick-contact-label">Orçamento</span>
+        </a>
+      </div>
+    </div>
   </div>
 </div>
-
-
 
 <script>
   const setupNavbar = () => {
     const navbar = document.getElementById('navbar');
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const mobileMenu = document.getElementById('mobileMenu');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
+    const mobileLinks = document.querySelectorAll('.mobile-menu-card, .quick-contact-item, .mobile-contact-whatsapp-btn');
 
     // Sticky Scroll Action
     const handleScroll = () => {

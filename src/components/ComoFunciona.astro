@@ -1,51 +1,107 @@
 ---
+interface Props {
+  isPage?: boolean;
+}
+const { isPage = false } = Astro.props;
 ---
-<section id="como">
+<section id="como" style={isPage ? "padding-top: 4rem;" : ""}>
   <div class="como-glow"></div>
   
   <div class="como-inner">
     <div class="como-header">
-      <div class="reveal">
-        <div class="section-label">O Processo Simples</div>
-        <h2 class="section-title">Como<br>Funciona</h2>
+      <div class="reveal visible">
+        <div class="section-label">O Processo Simplificado</div>
+        {isPage ? (
+          <h1 class="section-title" style="font-size: clamp(2.5rem, 5vw, 3.8rem); line-height: 1.1; margin-bottom: 1.5rem;">
+            Como<br>Funciona
+          </h1>
+        ) : (
+          <h2 class="section-title">Como<br>Funciona</h2>
+        )}
       </div>
-      <p class="section-body reveal" style="transition-delay:.1s">
-        Do primeiro contacto à entrega das chaves da sua nova casa expansível — um percurso rápido, transparente, sem sobressaltos e com acompanhamento especializado em cada detalhe.
+      <p class="section-body reveal visible" style="transition-delay:.1s; font-size: 1.1rem; color: var(--sand-light);">
+        Do primeiro contacto ao orçamento grátis e à entrega final da sua nova casa expansível modular — um percurso rápido, transparente, sem sobressaltos e com acompanhamento técnico especializado em cada detalhe.
       </p>
     </div>
 
-    <div class="steps reveal" style="transition-delay:.15s">
+    <div class="steps reveal visible" style="transition-delay:.15s; margin-bottom: 5rem;">
       
       <!-- Step 1 -->
       <div class="step">
         <div class="step-num">01</div>
         <div class="step-title">Contacto & Orçamento</div>
-        <p class="step-desc">Fale connosco, escolha o modelo base ideal e personalize a distribuição interior e os materiais. Fornecemos um orçamento detalhado, grátis e sem qualquer compromisso.</p>
+        <p class="step-desc">Fale connosco através do site ou WhatsApp. Escolha o layout modular ideal (T0 a T3) e defina os materiais de acabamento. Fornecemos um orçamento detalhado e transparente, de forma 100% gratuita.</p>
       </div>
       
       <!-- Step 2 -->
       <div class="step">
         <div class="step-num">02</div>
         <div class="step-title">Produção & Logística</div>
-        <p class="step-desc">A sua casa é integralmente fabricada sob rigorosos padrões industriais com os acabamentos escolhidos. Em seguida, é transportada em segurança em camião flatbed até ao seu terreno.</p>
+        <p class="step-desc">A sua habitação é integralmente produzida em ambiente industrial controlado, com rigorosos padrões de qualidade. O transporte para o seu terreno é inteiramente tratado por nós e por nossa conta, efetuado de forma 100% segura e planeada pela nossa equipa de logística.</p>
       </div>
       
       <!-- Step 3 -->
       <div class="step">
         <div class="step-num">03</div>
         <div class="step-title">Montagem & Ligações</div>
-        <p class="step-desc">A nossa equipa técnica especializada realiza a abertura mecânica, ancoragem e acabamentos finais no local em apenas 2 dias. As ligações de água, eletricidade e saneamento são entregues totalmente operacionais.</p>
+        <p class="step-desc">A nossa equipa técnica especializada desloca-se ao local e executa a abertura mecânica, fixação estrutural e acabamentos finais em apenas <strong>2 dias</strong>. As conexões de água, eletricidade e saneamento são ativadas.</p>
       </div>
       
       <!-- Step 4 -->
       <div class="step">
         <div class="step-num">04</div>
-        <div class="step-title">Habitação & Flexibilidade</div>
-        <p class="step-desc">A sua nova casa está pronta! Desfrute de um espaço premium moderno. E lembre-se: se um dia decidir mudar de localização, podemos voltar a dobrar e transportar a casa por si.</p>
+        <div class="step-title">Habitar & Flexibilidade</div>
+        <p class="step-desc">A sua casa está pronta! Desfrute de um espaço acolhedor, moderno e sustentável. Se no futuro necessitar de mudar de localização por motivos profissionais ou familiares, podemos dobrá-la e reinstalá-la.</p>
       </div>
       
     </div>
+
+    <!-- Technical Guide for Land Preparation (only on dedicated page) -->
+    {isPage && (
+      <div class="tech-guide-section reveal visible" style="margin-top: 4rem; background: rgba(13, 16, 23, 0.4); border: 1px solid var(--border2); border-radius: 8px; padding: 2.5rem; margin-bottom: 4rem;">
+        <h2 style="font-family: var(--font-display); font-size: 2.2rem; letter-spacing: 1px; color: var(--white); margin-bottom: 1.5rem; text-transform: uppercase;">
+          Preparação do Terreno & Infraestruturas
+        </h2>
+        <p style="color: var(--sand-light); margin-bottom: 2rem;">
+          Uma das grandes vantagens do sistema KasaRápida é a facilidade de instalação e a baixa exigência de preparação de solo, reduzindo drasticamente a burocracia e os custos de sapatas. Veja como deve preparar o seu lote:
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;">
+          <div style="border-left: 3px solid var(--copper); padding-left: 1.5rem;">
+            <h3 style="font-family: var(--font-body); font-size: 1.2rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem;">
+              1. Sapatas de Apoio ou Nivelamento
+            </h3>
+            <p style="color: var(--sand); font-size: 0.95rem;">
+              A casa expansível não necessita de uma placa de betão completa e permanente. É instalada sobre pequenas sapatas de betão localizadas nos pontos de apoio estrutural ou estacas de nivelamento, dependendo da inclinação e consistência do terreno.
+            </p>
+          </div>
+
+          <div style="border-left: 3px solid var(--copper); padding-left: 1.5rem;">
+            <h3 style="font-family: var(--font-body); font-size: 1.2rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem;">
+              2. Ligações às Redes Públicas
+            </h3>
+            <p style="color: var(--sand); font-size: 0.95rem;">
+              Todas as tubagens de água limpa, esgotos de saneamento e condutas elétricas estão embutidas nas paredes da casa. A nossa equipa faz a ligação rápida das saídas da casa às caixas de saneamento e ramais elétricos existentes no terreno.
+            </p>
+          </div>
+
+          <div style="border-left: 3px solid var(--copper); padding-left: 1.5rem;">
+            <h3 style="font-family: var(--font-body); font-size: 1.2rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem;">
+              3. Soluções Ecológicas Autónomas (Off-Grid)
+            </h3>
+            <p style="color: var(--sand); font-size: 0.95rem;">
+              Se o seu terreno não tem acesso a redes públicas, oferecemos kits integrados off-grid: painéis fotovoltaicos de última geração montados na cobertura da casa, baterias de lítio de alta capacidade para armazenamento e fossas biológicas estanques certificadas.
+            </p>
+          </div>
+        </div>
+      </div>
+    )}
+
+    {isPage && (
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 4rem;">
+        <a href="/faq" class="btn-primary">Ver Perguntas Frequentes (FAQ)</a>
+        <a href="/contacto" class="btn-ghost">Falar com o Responsável →</a>
+      </div>
+    )}
   </div>
 </section>
-
-

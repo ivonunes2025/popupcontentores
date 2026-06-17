@@ -8,36 +8,40 @@
         <a href="/" class="nav-logo" aria-label="KasaRápida Homepage">
           <svg class="brand-logo-svg" viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <linearGradient id="topFaceFooter" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#93c5fd"/>
-                <stop offset="100%" stop-color="#60a5fa"/>
+              <!-- Premium rich-dark circular background gradient -->
+              <linearGradient id="bgGradFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#0a0e17" />
+                <stop offset="100%" stop-color="#030509" />
               </linearGradient>
-              <linearGradient id="rightFaceFooter" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#2563eb"/>
-                <stop offset="100%" stop-color="#1d4ed8"/>
+
+              <!-- Ultra-vibrant tech-blue gradient for the logo mark -->
+              <linearGradient id="krGradFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#60a5fa" />
+                <stop offset="50%" stop-color="#2563eb" />
+                <stop offset="100%" stop-color="#1d4ed8" />
               </linearGradient>
-              <linearGradient id="leftFaceFooter" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#3b82f6"/>
-                <stop offset="100%" stop-color="#1d4ed8"/>
+              
+              <!-- Neon blue glow gradient -->
+              <linearGradient id="glowGradFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#93c5fd" />
+                <stop offset="100%" stop-color="#3b82f6" />
               </linearGradient>
             </defs>
 
-            <!-- ICON: Isometric 3D Modular Cube forming 'K' (Architectural & Tech-Savvy) -->
-            <g transform="translate(6, 4)">
-              <!-- Top Face of the Cube -->
-              <polygon points="18 4, 30 10, 18 16, 6 10" fill="url(#topFaceFooter)"/>
+            <!-- ICON: Sleek geometric house & lightning hybrid mark from favicon inside circular badge -->
+            <g transform="translate(6, 6) scale(0.36)">
+              <!-- Circular background badge - extremely modern and premium -->
+              <circle cx="50" cy="50" r="48" fill="url(#bgGradFooter)" stroke="#2563eb" stroke-width="2.5" stroke-opacity="0.5" />
               
-              <!-- Left Face of the Cube -->
-              <polygon points="6 10, 18 16, 18 32, 6 26" fill="url(#leftFaceFooter)"/>
+              <!-- Sleek geometric house & lightning hybrid mark -->
+              <!-- A sharp, clean roof shape outlined in vibrant tech-blue gradient -->
+              <path d="M 22 45 L 50 18 L 78 45" stroke="url(#krGradFooter)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
               
-              <!-- Right Face of the Cube -->
-              <polygon points="18 16, 30 10, 30 26, 18 32" fill="url(#rightFaceFooter)"/>
-              
-              <!-- An overlay speed arrow indicating "Rápida" that wraps around the cube -->
-              <path d="M 5 20 L 18 27 L 31 20" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
-              
-              <!-- Small tech dot connection at the apex -->
-              <circle cx="18" cy="4" r="2" fill="#ffffff" />
+              <!-- Bolder house body representing a modular shipping container -->
+              <rect x="27" y="45" width="46" height="34" rx="6" fill="#0d131f" stroke="url(#krGradFooter)" stroke-width="6" />
+
+              <!-- Speed lightning bolt ("Rápida" essence) in high-contrast neon blue, cutting through the house beautifully -->
+              <path d="M 52 28 L 64 28 L 50 48 L 60 48 L 40 74 L 46 53 L 36 53 Z" fill="url(#glowGradFooter)" />
             </g>
 
             <!-- TYPOGRAPHY: Elegant brand name -->
@@ -50,12 +54,10 @@
       <!-- Right side: Clean navigation row and Socials -->
       <div class="footer-nav-simple">
         <ul class="footer-links-simple">
-          <li><a href="/#sobre">O Que É</a></li>
-          <li><a href="/#vantagens">Vantagens</a></li>
-          <li><a href="/#modelos">Modelos</a></li>
-          <li><a href="/#como">Como Funciona</a></li>
-          <li><a href="/#faq">FAQ</a></li>
-          <li><a href="/#orcamento">Orçamento</a></li>
+          <li><a href="/o-que-e">O Que É</a></li>
+          <li><a href="/vantagens">Vantagens</a></li>
+          <li><a href="/como-funciona">Como Funciona</a></li>
+          <li><a href="/faq">FAQ</a></li>
         </ul>
 
         <div class="footer-social-simple">

@@ -1,42 +1,52 @@
 ---
+interface Props {
+  isPage?: boolean;
+}
+const { isPage = false } = Astro.props;
 ---
-<section id="vantagens">
+<section id="vantagens" style={isPage ? "padding-top: 4rem;" : ""}>
   <div class="vantagens-glow"></div>
   
   <div class="vantagens-inner">
     <div class="vantagens-header">
-      <div class="reveal">
-        <div class="section-label">Porquê Escolher</div>
-        <h2 class="section-title">Vantagens<br>Reais</h2>
+      <div class="reveal visible">
+        <div class="section-label">Construção Modular vs Alvenaria</div>
+        {isPage ? (
+          <h1 class="section-title" style="font-size: clamp(2.5rem, 5vw, 3.8rem); line-height: 1.1; margin-bottom: 1.5rem;">
+            Vantagens<br>Reais
+          </h1>
+        ) : (
+          <h2 class="section-title">Vantagens<br>Reais</h2>
+        )}
       </div>
-      <p class="section-body reveal" style="transition-delay:.1s">
-        A construção de alvenaria convencional demora meses, gera custos adicionais constantes e desgasta o seu orçamento. As nossas habitações KasaRápida chegam prontas a usar, com prazos e preços rigorosamente fechados.
+      <p class="section-body reveal visible" style="transition-delay:.1s; font-size: 1.1rem; color: var(--sand-light);">
+        A construção tradicional de alvenaria em Portugal demora meses (ou anos), sofre com constantes derrapagens financeiras e gera um enorme desgaste psicológico. As nossas casas modulares expansíveis chegam prontas, com prazos exatos e custos rigorosamente fechados.
       </p>
     </div>
 
-    <div class="vantagens-grid reveal" style="transition-delay:.15s">
+    <div class="vantagens-grid reveal visible" style="transition-delay:.15s; margin-bottom: 5rem;">
       <!-- Card 1 -->
       <div class="vantagem-card">
         <div class="card-glow"></div>
         <div class="vantagem-num">01</div>
         <div class="vantagem-title">Instalação em 2 Dias</div>
-        <p class="vantagem-desc">Sem fundações de betão complexas ou demoradas. A sua casa é instalada por uma equipa de montagem especializada em apenas 2 dias, ficando totalmente pronta e habitável.</p>
+        <p class="vantagem-desc">Diga adeus a meses de obras barulhentas. A sua habitação KasaRápida é montada mecanicamente por técnicos especializados em apenas 2 dias, ficando imediatamente habitável e ligada às redes.</p>
       </div>
       
       <!-- Card 2 -->
       <div class="vantagem-card">
         <div class="card-glow"></div>
         <div class="vantagem-num">02</div>
-        <div class="vantagem-title">Custo Muito Inferior</div>
-        <p class="vantagem-desc">Poupe até 60% face à construção tradicional. Garantimos um orçamento fechado e sem derrapagens financeiras imprevistas, permitindo-lhe gerir a sua vida com total controlo.</p>
+        <div class="vantagem-title">Custo Até 60% Inferior</div>
+        <p class="vantagem-desc">A produção industrial em massa e sem desperdício permite-nos oferecer habitações modernas a uma fração do custo da alvenaria tradicional. Garantimos orçamento fechado e sem surpresas.</p>
       </div>
       
       <!-- Card 3 -->
       <div class="vantagem-card">
         <div class="card-glow"></div>
         <div class="vantagem-num">03</div>
-        <div class="vantagem-title">Mobilidade Total</div>
-        <p class="vantagem-desc">Se a sua vida mudar, mude a casa consigo. Sendo perfeitamente transportável em camião flatbed, é a solução modular ideal para quem valoriza a flexibilidade geográfica e de investimentos.</p>
+        <div class="vantagem-title">Mobilidade & Versatilidade</div>
+        <p class="vantagem-desc">Uma flexibilidade que a alvenaria nunca conseguirá dar. Se um dia vender o seu terreno ou mudar de localização geográfica, a sua casa pode ser dobrada e transportada em camião flatbed.</p>
       </div>
       
       <!-- Card 4 -->
@@ -44,7 +54,7 @@
         <div class="card-glow"></div>
         <div class="vantagem-num">04</div>
         <div class="vantagem-title">Estrutura Ultra Robusta</div>
-        <p class="vantagem-desc">Desenvolvida com aço estrutural galvanizado reforçado. Projetada para resistir a ventos fortes, sismos moderados, cargas severas e variações térmicas extremas com a máxima estabilidade.</p>
+        <p class="vantagem-desc">Construída sobre um chassis robusto de aço galvanizado Q235B com proteção epóxi de alta aderência. Desenvolvida para resistir a terramotos, rajadas de vento até 120 km/h e intempéries severas.</p>
       </div>
       
       <!-- Card 5 -->
@@ -52,7 +62,7 @@
         <div class="card-glow"></div>
         <div class="vantagem-num">05</div>
         <div class="vantagem-title">Sustentabilidade Ativa</div>
-        <p class="vantagem-desc">Processo de fabrico industrializado de desperdício zero e baixíssima pegada ecológica. Preparada para a integração autónoma de painéis solares e sistemas de aproveitamento pluvial.</p>
+        <p class="vantagem-desc">Processo de fabrico controlado de desperdício zero. Paredes em painel sanduíche de poliuretano altamente eficiente e caixilharia de vidro duplo que garantem classificação energética classe A+.</p>
       </div>
       
       <!-- Card 6 -->
@@ -60,13 +70,71 @@
         <div class="card-glow"></div>
         <div class="vantagem-num">06</div>
         <div class="vantagem-title">100% Personalizável</div>
-        <p class="vantagem-desc">Acabamentos à sua medida. Escolha o revestimento interior e exterior (madeira, cimento, minimalista escuro ou claro). Desenhamos as divisões e a cozinha de acordo com o seu estilo.</p>
+        <p class="vantagem-desc">Personalize o seu espaço de forma simples. Escolha layouts interiores de T0 a T3, revestimentos (minimalistas, madeiras, antracite), cozinha equipada, tipo de casa de banho e extras premium.</p>
       </div>
     </div>
+
+    <!-- Comparative Section for SEO (only on dedicated page) -->
+    {isPage && (
+      <div class="comparison-section reveal visible" style="margin-top: 4rem; margin-bottom: 4rem;">
+        <h2 style="font-family: var(--font-display); font-size: 2.2rem; text-align: center; letter-spacing: 1px; color: var(--white); margin-bottom: 2rem; text-transform: uppercase;">
+          Tabela Comparativa: KasaRápida vs. Construção Tradicional
+        </h2>
+        
+        <div style="overflow-x: auto; background: rgba(13, 16, 23, 0.6); border: 1px solid var(--border2); border-radius: 8px; padding: 1.5rem;">
+          <table style="width: 100%; border-collapse: collapse; min-width: 600px; text-align: left; font-family: var(--font-body); color: var(--white);">
+            <thead>
+              <tr style="border-bottom: 2px solid var(--copper);">
+                <th style="padding: 1rem; font-weight: bold; color: var(--sand-light);">Característica</th>
+                <th style="padding: 1rem; font-weight: bold; color: var(--copper);">KasaRápida (Modular Expansível)</th>
+                <th style="padding: 1rem; font-weight: bold; color: var(--muted);">Construção Tradicional (Alvenaria)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 1rem; font-weight: 500;">Tempo de Construção</td>
+                <td style="padding: 1rem; color: #10b981;">✓ 30 a 60 dias (Produção) + 2 dias (Instalação)</td>
+                <td style="padding: 1rem; color: #ef4444;">✗ 12 a 24 meses de obras constantes</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 1rem; font-weight: 500;">Previsibilidade de Custo</td>
+                <td style="padding: 1rem; color: #10b981;">✓ Preço chave-na-mão fixo e sem derrapagens</td>
+                <td style="padding: 1rem; color: #ef4444;">✗ Constantes custos extra e taxas imprevistas</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 1rem; font-weight: 500;">Isolamento Térmico</td>
+                <td style="padding: 1rem; color: #10b981;">✓ Painel Sanduíche Poliuretano 75mm (Classe A+)</td>
+                <td style="padding: 1rem; color: var(--sand);">Variável consoante materiais aplicados</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 1rem; font-weight: 500;">Impacto no Terreno</td>
+                <td style="padding: 1rem; color: #10b981;">✓ Praticamente nulo (sem betão permanente)</td>
+                <td style="padding: 1rem; color: #ef4444;">✗ Escavações agressivas e resíduos de cimento</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 1rem; font-weight: 500;">Mobilidade e Flexibilidade</td>
+                <td style="padding: 1rem; color: #10b981;">✓ 100% transportável, reposicionável e dobrável</td>
+                <td style="padding: 1rem; color: #ef4444;">✗ Estrutura fixe irreversível ao solo</td>
+              </tr>
+              <tr>
+                <td style="padding: 1rem; font-weight: 500;">Processo de Licenciamento</td>
+                <td style="padding: 1rem; color: #10b981;">✓ Processos céleres com enquadramentos modernos</td>
+                <td style="padding: 1rem; color: #ef4444;">✗ Burocracia municipal lenta e complexa</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    )}
+
+    {isPage && (
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 4rem;">
+        <a href="/como-funciona" class="btn-primary">Ver Como Funciona a Montagem</a>
+        <a href="/contacto" class="btn-ghost">Falar com o Responsável →</a>
+      </div>
+    )}
   </div>
 </section>
-
-
 
 <script>
   const setupCardHoverGlow = () => {

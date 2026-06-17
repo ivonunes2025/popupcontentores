@@ -1,124 +1,168 @@
 ---
+interface Props {
+  isPage?: boolean;
+}
+const { isPage = false } = Astro.props;
 ---
-<section class="about" id="sobre">
+<section class="about" id="sobre" style={isPage ? "padding-top: 4rem;" : ""}>
   <div class="about-glow"></div>
   
-  <div class="about-inner">
-    <div class="about-visual reveal">
-      <div class="svg-container">
-        <!-- Container house SVG illustration -->
-        <svg class="container-svg" viewBox="0 0 400 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Ground -->
-          <line x1="20" y1="240" x2="380" y2="240" stroke="#3a3832" stroke-width="1"/>
+  <div class="about-inner" style={isPage ? "align-items: flex-start;" : ""}>
+    
+    <!-- LEFT COLUMN: Image & Applications -->
+    <div class="reveal visible" style="display: flex; flex-direction: column; gap: 2.5rem; width: 100%;">
+      <div class="about-visual" style="width: 100%;">
+        <div class="svg-container">
+          <!-- Container house SVG illustration -->
+          <svg class="container-svg" viewBox="0 0 400 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Ground -->
+            <line x1="20" y1="240" x2="380" y2="240" stroke="#3a3832" stroke-width="1"/>
 
-          <!-- Left fixed module -->
-          <rect x="20" y="120" width="130" height="120" fill="#1a1a17" stroke="#3a3832" stroke-width="1"/>
-          <!-- Windows left -->
-          <rect x="35" y="140" width="40" height="28" fill="#0b0b0a" stroke="#c8b89a" stroke-width=".8" rx="1"/>
-          <rect x="85" y="140" width="40" height="28" fill="#0b0b0a" stroke="#c8b89a" stroke-width=".8" rx="1"/>
-          <rect x="35" y="182" width="40" height="28" fill="#0b0b0a" stroke="#c8b89a" stroke-width=".8" rx="1"/>
-          <!-- Door left -->
-          <rect x="85" y="190" width="30" height="50" fill="#0b0b0a" stroke="#c8b89a" stroke-width=".8" rx="1"/>
-          <circle cx="111" cy="215" r="2" fill="#00f2fe"/>
+            <!-- Left fixed module -->
+            <rect x="20" y="120" width="130" height="120" fill="#1a1a17" stroke="#3a3832" stroke-width="1"/>
+            <!-- Windows left -->
+            <rect x="35" y="140" width="40" height="28" fill="#0b0b0a" stroke="#c8b89a" stroke-width=".8" rx="1"/>
+            <rect x="85" y="140" width="40" height="28" fill="#0b0b0a" stroke="#c8b89a" stroke-width=".8" rx="1"/>
+            <rect x="35" y="182" width="40" height="28" fill="#0b0b0a" stroke="#c8b89a" stroke-width=".8" rx="1"/>
+            <!-- Door left -->
+            <rect x="85" y="190" width="30" height="50" fill="#0b0b0a" stroke="#c8b89a" stroke-width=".8" rx="1"/>
+            <circle cx="111" cy="215" r="2" fill="#00f2fe"/>
 
-          <!-- Right expanded module (expanded outward) -->
-          <rect x="250" y="120" width="130" height="120" fill="#1a1a17" stroke="#3a3832" stroke-width="1"/>
-          <!-- Windows right -->
-          <rect x="265" y="140" width="40" height="28" fill="#0b0b0a" stroke="#c8b89a" stroke-width=".8" rx="1"/>
-          <rect x="315" y="140" width="40" height="28" fill="#0b0b0a" stroke="#c8b89a" stroke-width=".8" rx="1"/>
-          <rect x="315" y="182" width="40" height="28" fill="#0b0b0a" stroke="#c8b89a" stroke-width=".8" rx="1"/>
-          <rect x="265" y="182" width="40" height="28" fill="#0b0b0a" stroke="#c8b89a" stroke-width=".8" rx="1"/>
+            <!-- Right expanded module -->
+            <rect x="250" y="120" width="130" height="120" fill="#1a1a17" stroke="#3a3832" stroke-width="1"/>
+            <!-- Windows right -->
+            <rect x="265" y="140" width="40" height="28" fill="#0b0b0a" stroke="#c8b89a" stroke-width=".8" rx="1"/>
+            <rect x="315" y="140" width="40" height="28" fill="#0b0b0a" stroke="#c8b89a" stroke-width=".8" rx="1"/>
+            <rect x="315" y="182" width="40" height="28" fill="#0b0b0a" stroke="#c8b89a" stroke-width=".8" rx="1"/>
+            <rect x="265" y="182" width="40" height="28" fill="#0b0b0a" stroke="#c8b89a" stroke-width=".8" rx="1"/>
 
-          <!-- Center connecting section -->
-          <rect x="150" y="120" width="100" height="120" fill="#22221e" stroke="#00f2fe" stroke-width=".8"/>
-          <!-- Big glass front -->
-          <rect x="160" y="130" width="80" height="90" fill="#0b0b0a" stroke="#00f2fe" stroke-width=".7" rx="1"/>
-          <!-- Vertical glass divider -->
-          <line x1="200" y1="130" x2="200" y2="220" stroke="#00f2fe" stroke-width=".5"/>
-          <!-- Horizontal glass dividers -->
-          <line x1="160" y1="165" x2="240" y2="165" stroke="#00f2fe" stroke-width=".5"/>
-          <!-- Interior glow -->
-          <rect x="162" y="132" width="76" height="31" fill="rgba(0, 242, 254, 0.08)" rx="1"/>
+            <!-- Center connecting section -->
+            <rect x="150" y="120" width="100" height="120" fill="#22221e" stroke="#00f2fe" stroke-width=".8"/>
+            <!-- Big glass front -->
+            <rect x="160" y="130" width="80" height="90" fill="#0b0b0a" stroke="#00f2fe" stroke-width=".7" rx="1"/>
+            <!-- Vertical glass divider -->
+            <line x1="200" y1="130" x2="200" y2="220" stroke="#00f2fe" stroke-width=".5"/>
+            <!-- Horizontal glass dividers -->
+            <line x1="160" y1="165" x2="240" y2="165" stroke="#00f2fe" stroke-width=".5"/>
+            <!-- Interior glow -->
+            <rect x="162" y="132" width="76" height="31" fill="rgba(0, 242, 254, 0.08)" rx="1"/>
 
-          <!-- Roof left -->
-          <polygon points="15,120 155,120 155,112 15,112" fill="#252521" stroke="#3a3832" stroke-width=".8"/>
-          <!-- Roof center -->
-          <rect x="150" y="112" width="100" height="8" fill="#2c2c28" stroke="#00f2fe" stroke-width=".8"/>
-          <!-- Roof right -->
-          <polygon points="245,120 385,120 385,112 245,112" fill="#252521" stroke="#3a3832" stroke-width=".8"/>
+            <!-- Roof left -->
+            <polygon points="15,120 155,120 155,112 15,112" fill="#252521" stroke="#3a3832" stroke-width=".8"/>
+            <!-- Roof center -->
+            <rect x="150" y="112" width="100" height="8" fill="#2c2c28" stroke="#00f2fe" stroke-width=".8"/>
+            <!-- Roof right -->
+            <polygon points="245,120 385,120 385,112 245,112" fill="#252521" stroke="#3a3832" stroke-width=".8"/>
 
-          <!-- Expansion arrows -->
-          <g class="expansion-arrows">
-            <line x1="150" y1="180" x2="130" y2="180" stroke="#00f2fe" stroke-width="1" stroke-dasharray="3,3"/>
-            <polygon points="128,176 122,180 128,184" fill="#00f2fe"/>
-            <line x1="250" y1="180" x2="270" y2="180" stroke="#00f2fe" stroke-width="1" stroke-dasharray="3,3"/>
-            <polygon points="272,176 278,180 272,184" fill="#00f2fe"/>
-          </g>
+            <!-- Expansion arrows -->
+            <g class="expansion-arrows">
+              <line x1="150" y1="180" x2="130" y2="180" stroke="#00f2fe" stroke-width="1" stroke-dasharray="3,3"/>
+              <polygon points="128,176 122,180 128,184" fill="#00f2fe"/>
+              <line x1="250" y1="180" x2="270" y2="180" stroke="#00f2fe" stroke-width="1" stroke-dasharray="3,3"/>
+              <polygon points="272,176 278,180 272,184" fill="#00f2fe"/>
+            </g>
 
-          <!-- Foundation legs -->
-          <rect x="45" y="240" width="8" height="18" fill="#252521"/>
-          <rect x="97" y="240" width="8" height="18" fill="#252521"/>
-          <rect x="170" y="240" width="8" height="18" fill="#252521"/>
-          <rect x="222" y="240" width="8" height="18" fill="#252521"/>
-          <rect x="285" y="240" width="8" height="18" fill="#252521"/>
-          <rect x="347" y="240" width="8" height="18" fill="#252521"/>
+            <!-- Foundation legs -->
+            <rect x="45" y="240" width="8" height="18" fill="#252521"/>
+            <rect x="97" y="240" width="8" height="18" fill="#252521"/>
+            <rect x="170" y="240" width="8" height="18" fill="#252521"/>
+            <rect x="222" y="240" width="8" height="18" fill="#252521"/>
+            <rect x="285" y="240" width="8" height="18" fill="#252521"/>
+            <rect x="347" y="240" width="8" height="18" fill="#252521"/>
 
-          <!-- Label -->
-          <text x="200" y="270" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="9.5" letter-spacing="2.5" fill="#828077">MODULAR EXPANDABLE SYSTEM</text>
-        </svg>
+            <!-- Label -->
+            <text x="200" y="270" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="9.5" letter-spacing="2.5" fill="#828077">MODULAR EXPANDABLE SYSTEM</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- APPLICATIONS DIRECTLY UNDER IMAGE -->
+      <div>
+        <h3 style="font-family: var(--font-display); font-size: 1.6rem; letter-spacing: 1px; color: var(--white); margin-bottom: 1.5rem; text-transform: uppercase;">
+          As Nossas Principais Aplicações em Portugal
+        </h3>
+
+        <div class="about-applications">
+          <div class="app-item">
+            <span class="app-icon">🏡</span>
+            <div>
+              <strong>Habitação Própria Permanente</strong>
+              <p>Conforto térmico, acústico e isolamento de poliuretano de alta densidade para viver com qualidade todos os dias do ano.</p>
+            </div>
+          </div>
+          <div class="app-item">
+            <span class="app-icon">🌳</span>
+            <div>
+              <strong>Casa de Férias ou de Campo</strong>
+              <p>O refúgio perfeito na natureza ou na praia, sem as tradicionais dores de cabeça das obras de alvenaria.</p>
+            </div>
+          </div>
+          <div class="app-item">
+            <span class="app-icon">✨</span>
+            <div>
+              <strong>Segunda Habitação / Anexo de Jardim</strong>
+              <p>Expanda o seu espaço familiar ou crie um espaço independente e privado para visitas no seu terreno.</p>
+            </div>
+          </div>
+          <div class="app-item">
+            <span class="app-icon">☀️</span>
+            <div>
+              <strong>Turismo e Alojamento Local (AL)</strong>
+              <p>Instalação imediata para investidores. Alto retorno financeiro com rápida rentabilidade do investimento imobiliário.</p>
+            </div>
+          </div>
+          <div class="app-item">
+            <span class="app-icon">💼</span>
+            <div>
+              <strong>Escritório ou Estúdio de Trabalho</strong>
+              <p>Um espaço privado, isolado termicamente, ideal para teletrabalho, atelier artístico ou consultório médico.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="about-content reveal" style="transition-delay:.15s">
-      <div class="section-label">O Que É</div>
-      <h2 class="section-title">Habitação Contentor<br>KasaRápida</h2>
-
-      <div class="about-applications">
-        <div class="app-item">
-          <span class="app-icon">🏡</span>
-          <div>
-            <strong>Habitação Própria Permanente</strong>
-            <p>Conforto térmico, acústico e isolamento de alta qualidade para o seu dia a dia.</p>
-          </div>
-        </div>
-        <div class="app-item">
-          <span class="app-icon">🌳</span>
-          <div>
-            <strong>Casa de Férias / Campo</strong>
-            <p>O refúgio perfeito na natureza sem as tradicionais dores de cabeça das obras.</p>
-          </div>
-        </div>
-        <div class="app-item">
-          <span class="app-icon">✨</span>
-          <div>
-            <strong>Segunda Habitação / Anexo</strong>
-            <p>Expanda o seu espaço familiar ou crie uma residência independente no seu terreno.</p>
-          </div>
-        </div>
-        <div class="app-item">
-          <span class="app-icon">☀️</span>
-          <div>
-            <strong>Turismo e Alojamento Local</strong>
-            <p>Instalação imediata com alto retorno financeiro e rápida rentabilidade.</p>
-          </div>
-        </div>
-        <div class="app-item">
-          <span class="app-icon">💼</span>
-          <div>
-            <strong>Escritório ou Estúdio de Jardim</strong>
-            <p>Um espaço de trabalho privado, isolado e altamente produtivo perto de si.</p>
-          </div>
-        </div>
-      </div>
+    <!-- RIGHT COLUMN: Text content and pills -->
+    <div class="about-content reveal visible">
+      <div class="section-label">Sobre</div>
+      {isPage ? (
+        <h1 class="section-title" style="font-size: clamp(2.5rem, 5vw, 3.8rem); line-height: 1.1; margin-bottom: 1.5rem;">
+          O Que É a<br>KasaRápida?
+        </h1>
+      ) : (
+        <h2 class="section-title">Habitação Contentor<br>KasaRápida</h2>
+      )}
       
-      <div class="about-pills">
+      <p class="section-body" style="font-size: 1.1rem; color: var(--sand-light); margin-bottom: 2rem;">
+        A KasaRápida é uma marca portuguesa pioneira no desenvolvimento de <strong>habitações modulares expansíveis de alta performance</strong>. Combinamos o melhor da engenharia de casas contentor dobráveis com designs modernos de assinatura, oferecendo uma solução habitacional extremamente rápida de instalar, sustentável e acessível.
+      </p>
+
+      {isPage && (
+        <>
+          <h2 style="font-family: var(--font-display); font-size: 2rem; letter-spacing: 1px; color: var(--white); margin-bottom: 1rem; text-transform: uppercase;">
+            Casas Modulares Inteligentes e Versáteis
+          </h2>
+          <p style="color: var(--sand); margin-bottom: 2rem; font-size: 0.95rem;">
+            A nossa tecnologia patenteada permite que a estrutura da casa seja transportada de forma totalmente fechada e compacta. No local de montagem, a nossa equipa realiza a abertura mecânica das paredes e coberturas em tempo recorde. Em apenas <strong>2 dias</strong>, a casa passa de um bloco fechado a uma habitação de 32 m² completamente habitável, isolada e com todas as instalações elétricas e sanitárias operacionais.
+          </p>
+        </>
+      )}
+      
+      <div class="about-pills" style="margin-top: 3rem;">
         <span class="pill">Foldable Container House</span>
         <span class="pill">Expandable House</span>
         <span class="pill">Modular Smart Home</span>
         <span class="pill">Casa Dobrável</span>
         <span class="pill">Casa Expansível</span>
+        <span class="pill">Construção Sustentável</span>
       </div>
+
+      {isPage && (
+        <div style="margin-top: 3rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="/modelos/compact20" class="btn-primary">Ver Detalhes do Modelo Compact 20</a>
+          <a href="/contacto" class="btn-ghost">Falar com o Responsável →</a>
+        </div>
+      )}
     </div>
   </div>
 </section>
-

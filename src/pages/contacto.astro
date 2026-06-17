@@ -1,0 +1,73 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Contactos e Falar com o Responsável — KasaRápida" description="Contacte diretamente o responsável pelas casas modulares expansíveis KasaRápida em Portugal. Fale por WhatsApp 914003331, chamada telefónica, SMS ou email.">
+  <Header />
+  
+  <main class="model-detail-page">
+    <section class="cta-final" id="orcamento" style="padding-top: 4rem;">
+      <div class="cta-bg-text">CONTACTOS</div>
+      
+      <div class="cta-final-inner">
+        <div class="reveal visible">
+          <div class="section-label" style="justify-content:center">Fale Connosco Direto</div>
+          <h1 class="section-title" style="font-size: clamp(2.5rem, 5vw, 3.8rem); line-height: 1.1; margin-bottom: 1.5rem; text-align: center;">
+            Fale Direto com o<br><em style="color:var(--copper);font-style:normal">Responsável</em>
+          </h1>
+          <p class="section-body" style="margin:1rem auto 3rem; text-align:center; max-width: 580px; font-size: 1.1rem; color: var(--sand-light);">
+            Tem dúvidas sobre o terreno, preços, transporte ou licenciamento? Fale diretamente com quem percebe! Pode enviar mensagem, telefonar ou iniciar um chat imediato no WhatsApp.
+          </p>
+        </div>
+
+        <!-- Glowing WhatsApp CTA Button -->
+        <div class="reveal visible" style="display: flex; justify-content: center; margin-bottom: 4rem; width: 100%;">
+          <a href="https://wa.me/351914003331" target="_blank" class="btn-primary" style="background:#25d366; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45); font-size: 1.2rem; font-weight: 700; padding: 1.2rem 2.8rem; gap: 12px; display: inline-flex; align-items: center; justify-content: center; border-radius: 4px; text-decoration: none; color: #ffffff; transition: all 0.3s ease;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.458L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.742.002-2.602-1.005-5.05-2.839-6.89C16.656 2.138 14.21 1.129 12.007 1.13c-5.442 0-9.866 4.372-9.87 9.746-.002 1.942.512 3.84 1.492 5.535L2.61 21.037l4.037-1.883zm13.11-7.234c-.26-.13-1.532-.756-1.77-.84-.236-.087-.41-.13-.58.13-.17.26-.66.84-.81.995-.147.155-.296.17-.556.04-.26-.13-1.097-.404-2.09-1.287-.773-.688-1.295-1.538-1.447-1.797-.15-.26-.016-.4.113-.53.117-.117.26-.3.39-.45.13-.15.174-.26.26-.43.088-.173.044-.326-.02-.456-.065-.13-.58-1.393-.795-1.91-.21-.51-.42-.44-.58-.45-.15-.007-.323-.008-.493-.008-.17 0-.447.064-.68.314-.233.25-.89.87-.89 2.122 0 1.25.91 2.457 1.036 2.624.127.168 1.792 2.738 4.342 3.836.607.262 1.08.42 1.448.537.61.194 1.165.167 1.604.102.49-.072 1.53-.625 1.743-1.2.215-.575.215-1.07.15-1.17-.064-.1-.235-.16-.494-.29z"/>
+            </svg>
+            <span>Falar por WhatsApp Agora</span>
+          </a>
+        </div>
+
+        <!-- Details Grid -->
+        <div class="contact-details reveal visible" style="transition-delay:.15s; margin-bottom: 4rem;">
+          <!-- WhatsApp / Chamada / SMS direct link -->
+          <div class="detail-card">
+            <div class="detail-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--copper)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <div class="detail-title">WhatsApp / Telemóvel</div>
+            <a href="tel:+351914003331" class="detail-link">+351 914 003 331</a>
+          </div>
+          
+          <div class="detail-divider"></div>
+          
+          <!-- Direct Email link -->
+          <div class="detail-card">
+            <div class="detail-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--copper)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div class="detail-title">E-mail Direto</div>
+            <a href="mailto:kasarapida@gmail.com" class="detail-link">kasarapida@gmail.com</a>
+          </div>
+          
+          <div class="detail-divider"></div>
+          
+          <!-- Direct Contact support details -->
+          <div class="detail-card">
+            <div class="detail-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--copper)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <div class="detail-title">Atendimento Direto</div>
+            <span class="detail-text">Fale com o responsável · Resposta imediata</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>

@@ -1,119 +1,102 @@
 ---
+interface Props {
+  isPage?: boolean;
+}
+const { isPage = false } = Astro.props;
+
+// FAQ Content structured for the page and JSON-LD schema
+const faqs = [
+  {
+    q: "Preciso de licença de construção para instalar uma habitação KasaRápida?",
+    a: "Em Portugal, a necessidade de licenciamento depende do uso da habitação e da sua fixação ao solo. Para habitação própria permanente e ligação definitiva às redes públicas, é normalmente exigido um processo de comunicação prévia ou licenciamento camarário. No entanto, para fins agrícolas temporários, de apoio ou turismo rural, existem enquadramentos legais específicos mais céleres. A KasaRápida presta consultoria completa e apoio técnico para o ajudar a enquadrar legalmente o seu projeto sem complicações burocráticas."
+  },
+  {
+    q: "Quanto tempo demora desde a encomenda até à casa instalada?",
+    a: "O prazo médio situa-se entre 30 a 60 dias úteis para a produção industrial customizada e entrega física da habitação no seu terreno. A instalação física em si, realizada no terreno pela nossa equipa de montagem dedicada, demora apenas 2 dias, deixando a casa 100% pronta a habitar."
+  },
+  {
+    q: "Como são feitas as ligações de água, esgotos e eletricidade?",
+    a: "As habitações KasaRápida são entregues com toda a pré-instalação de canalização, esgotos e cablagem elétrica embutidas nos painéis sanduíche. No local de montagem, a nossa equipa liga essas saídas às infraestruturas de saneamento, água e luz existentes no seu terreno. Também oferecemos kits ecológicos off-grid com painéis fotovoltaicos de última geração, baterias de lítio e fossas biológicas integradas."
+  },
+  {
+    q: "A casa resiste bem ao clima português (calor, chuva e vento)?",
+    a: "Sim, perfeitamente. A estrutura é feita de aço galvanizado anticorrosivo com paredes de painéis sanduíche termo-acústicos avançados. O isolamento de poliuretano de alta densidade foi testado para suportar ventos de tempestade até 120 km/h, terramotos de intensidade moderada e isolar eficazmente as temperaturas interiores, variando entre climas de -20°C a +50°C."
+  },
+  {
+    q: "Que tipo de customização interior posso escolher?",
+    a: "Pode escolher layouts flexíveis de T0 a T3 com divisórias internas, além de revestimentos de parede (madeira, tons minimalistas, antracite), o tipo de pavimento laminado vinílico flutuante, a cor dos armários de cozinha, os sanitários e torneiras das casas de banho. Opcionalmente, pode adicionar cobertura exterior carport para carro, deck de madeira frontal ou escadas para terraço superior de cobertura."
+  },
+  {
+    q: "Qual é o preço real chave-na-mão de uma habitação KasaRápida?",
+    a: "O nosso modelo de assinatura Compact 20 (32 m²) começa nos €22.000. Este valor inclui a casa com cozinha básica, casa de banho completa, fiação elétrica e esgotos embutidos, além de transporte totalmente por nossa conta (sem custos adicionais nem chatices para o cliente) e instalação mecânica completa pela nossa equipa especializada em qualquer ponto de Portugal Continental. O valor final varia dependendo das configurações adicionais selecionadas (como o Deck frontal, Terraço superior ou Carport)."
+  }
+];
+
+// Generate JSON-LD Structured Data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.a
+    }
+  }))
+};
 ---
-<section id="faq">
+
+{isPage && (
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
+)}
+
+<section id="faq" style={isPage ? "padding-top: 4rem;" : ""}>
   <div class="faq-inner">
     
-    <div class="faq-header reveal">
-      <div class="section-label">Dúvidas Frequentes</div>
-      <h2 class="section-title">Perguntas<br>Frequentes</h2>
-      <p class="faq-intro-text">
-        Se tem alguma questão sobre as nossas habitações modulares expansíveis, explore as respostas abaixo. Se a sua pergunta não estiver aqui, sinta-se à vontade para nos contactar diretamente.
+    <div class="faq-header reveal visible">
+      <div class="section-label">Esclareça as suas Dúvidas</div>
+      {isPage ? (
+        <h1 class="section-title" style="font-size: clamp(2.5rem, 5vw, 3.8rem); line-height: 1.1; margin-bottom: 1.5rem;">
+          Perguntas<br>Frequentes
+        </h1>
+      ) : (
+        <h2 class="section-title">Perguntas<br>Frequentes</h2>
+      )}
+      <p class="faq-intro-text" style="font-size: 1.1rem; color: var(--sand-light); margin-bottom: 2rem;">
+        Explore as respostas às dúvidas mais comuns sobre as nossas habitações modulares expansíveis. Caso a sua dúvida não esteja listada, sinta-se à vontade para nos contactar diretamente.
       </p>
     </div>
 
-    <div class="faq-list">
+    <div class="faq-list" style="margin-top: 3rem; margin-bottom: 5rem;">
       
-      <!-- FAQ 1 -->
-      <div class="faq-item reveal">
-        <button class="faq-q" aria-expanded="false">
-          <span>Preciso de licença de construção para instalar uma habitação KasaRápida?</span>
-          <div class="faq-icon-wrapper">
-            <span class="faq-icon-line h-line"></span>
-            <span class="faq-icon-line v-line"></span>
-          </div>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            Em Portugal, a necessidade de licenciamento depende do uso da habitação e da sua fixação ao solo. Para habitação própria permanente e ligação definitiva às redes públicas, é normalmente exigido um processo de comunicação prévia ou licenciamento camarário. No entanto, para fins agrícolas temporários, de apoio ou turismo rural, existem enquadramentos legais específicos mais céleres. A KasaRápida presta consultoria completa e apoio técnico para o ajudar a enquadrar legalmente o seu projeto sem complicações burocráticas.
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ 2 -->
-      <div class="faq-item reveal" style="transition-delay:.05s">
-        <button class="faq-q" aria-expanded="false">
-          <span>Quanto tempo demora desde a encomenda até à casa instalada?</span>
-          <div class="faq-icon-wrapper">
-            <span class="faq-icon-line h-line"></span>
-            <span class="faq-icon-line v-line"></span>
-          </div>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            O prazo médio situa-se entre 30 a 60 dias úteis para a produção industrial customizada e entrega física da habitação no seu terreno. A instalação física em si, realizada no terreno pela nossa equipa de montagem dedicada, demora apenas 2 dias, deixando a casa 100% pronta a habitar.
+      {faqs.map((faq, idx) => (
+        <div class="faq-item reveal visible" style={`transition-delay: ${idx * 0.05}s`}>
+          <button class="faq-q" aria-expanded="false">
+            <span>{faq.q}</span>
+            <div class="faq-icon-wrapper">
+              <span class="faq-icon-line h-line"></span>
+              <span class="faq-icon-line v-line"></span>
+            </div>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              {faq.a}
+            </div>
           </div>
         </div>
-      </div>
-
-      <!-- FAQ 3 -->
-      <div class="faq-item reveal" style="transition-delay:.1s">
-        <button class="faq-q" aria-expanded="false">
-          <span>Como são feitas as ligações de água, esgotos e eletricidade?</span>
-          <div class="faq-icon-wrapper">
-            <span class="faq-icon-line h-line"></span>
-            <span class="faq-icon-line v-line"></span>
-          </div>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            As habitações KasaRápida são entregues com toda a pré-instalação de canalização, esgotos e cablagem elétrica embutidas nos painéis sanduíche. No local de montagem, a nossa equipa liga essas saídas às infraestruturas de saneamento, água e luz existentes no seu terreno. Também oferecemos kits ecológicos off-grid com painéis fotovoltaicos de última geração, baterias de lítio e fossas biológicas integradas.
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ 4 -->
-      <div class="faq-item reveal" style="transition-delay:.15s">
-        <button class="faq-q" aria-expanded="false">
-          <span>A casa resiste bem ao clima português (calor, chuva e vento)?</span>
-          <div class="faq-icon-wrapper">
-            <span class="faq-icon-line h-line"></span>
-            <span class="faq-icon-line v-line"></span>
-          </div>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            Sim, perfeitamente. A estrutura é feita de aço galvanizado anticorrosivo com paredes de painéis sanduíche termo-acústicos avançados. O isolamento de poliuretano de alta densidade foi testado para suportar ventos de tempestade até 120 km/h, terramotos de intensidade moderada e isolar eficazmente as temperaturas interiores, variando entre climas de -20°C a +50°C.
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ 5 -->
-      <div class="faq-item reveal" style="transition-delay:.2s">
-        <button class="faq-q" aria-expanded="false">
-          <span>Que tipo de customização interior posso escolher?</span>
-          <div class="faq-icon-wrapper">
-            <span class="faq-icon-line h-line"></span>
-            <span class="faq-icon-line v-line"></span>
-          </div>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            Pode escolher praticamente tudo: os revestimentos de parede (madeira, tons minimalistas, cimento), o tipo de pavimento laminado vinílico flutuante, a cor dos armários de cozinha, os sanitários e torneiras das casas de banho, e até a colocação ou tamanho de janelas panorâmicas extra. Todos os materiais são de qualidade superior e fáceis de limpar.
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ 6 -->
-      <div class="faq-item reveal" style="transition-delay:.25s">
-        <button class="faq-q" aria-expanded="false">
-          <span>Qual é o preço real chave-na-mão de uma habitação KasaRápida?</span>
-          <div class="faq-icon-wrapper">
-            <span class="faq-icon-line h-line"></span>
-            <span class="faq-icon-line v-line"></span>
-          </div>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            Os preços variam de acordo com o modelo de catálogo e personalizações selecionadas. O modelo Compact 20 (32 m²) começa nos €22.000, enquanto a luxuosa Villa 60 (96 m²) inicia-se nos €64.900. Estes valores incluem o transporte básico e a instalação mecânica completa em qualquer ponto de Portugal Continental.
-          </div>
-        </div>
-      </div>
+      ))}
 
     </div>
+
+    {isPage && (
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 4rem;">
+        <a href="/contacto" class="btn-primary">Falar com o Responsável</a>
+        <a href="/o-que-e" class="btn-ghost">Saber Mais Sobre o Conceito →</a>
+      </div>
+    )}
   </div>
 </section>
-
-
 
 <script>
   const setupFaqAccordion = () => {
